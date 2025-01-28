@@ -1,0 +1,28 @@
+﻿<main id="main" class="main">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add New Quiz </h5>
+                <form class="row g-3">
+                    <div class="col-12">
+                        <label for="inputName4" class="form-label">Quiz Name</label>
+                        <input type="text" class="form-control" id="inputName4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputQuestions4" class="form-label">TotalQuestions</label>
+                        <input type="number" class="form-control" id="inputQuestions4">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="inputdate" class="form-label">QuizDate</label>
+                        <input type="date" class="form-control" id="inputdate">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <a class="btn btn-secondary" asp-controller="Quiz" asp-action="QuizList">Cancel</a>
+                    </div>
+                </form><!-- Vertical Form -->
+            </div>
+        </div>
+    </div>
+</main>

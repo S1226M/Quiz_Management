@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Quiz_Management\\Quiz-Management.csproj",
-      "projectName": "Quiz-Management",
-      "projectPath": "D:\\Quiz_Management\\Quiz-Management.csproj",
+      "projectUniqueName": "D:\\Quiz_Management\\QuizeManagement.csproj",
+      "projectName": "QuizeManagement",
+      "projectPath": "D:\\Quiz_Management\\QuizeManagement.csproj",
       "packagesPath": "C:\\Users\\smitm\\.nuget\\packages\\",
       "outputPath": "D:\\Quiz_Management\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,0 +1,69 @@
+﻿<main id="main" class="main">
+    <div class="container">
+        <!-- Search Section -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Search Quizzes</h5>
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <label for="quizName" class="form-label">Quiz Name</label>
+                        <input type="text" class="form-control" id="quizName" placeholder="Enter quiz name">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="quizDate" class="form-label">Quiz Date</label>
+                        <input type="date" class="form-control" id="quizDate">
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button type="button" class="btn btn-primary btn-custom mx-1">Search</button>
+                        <button type="reset" class="btn btn-secondary btn-custom mx-1">Reset</button>
+                        <a class="btn btn-success mx-1" asp-controller="Quiz" asp-action="QuizeAdd"> Add New Quiz</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quiz List Section -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Quiz List</h5>
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Quiz Name</th>
+                            <th>Total Questions</th>
+                            <th>Quiz Date</th>
+                            <th>User ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>General Knowledge</td>
+                            <td>20</td>
+                            <td>2025-01-01</td>
+                            <td>101</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Science Quiz</td>
+                            <td>15</td>
+                            <td>2025-01-15</td>
+                            <td>102</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>

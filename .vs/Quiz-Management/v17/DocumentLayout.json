@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\Quiz_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|d:\\quiz_management\\views\\form\\formvalidation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|solutionrelative:views\\form\\formvalidation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|d:\\quiz_management\\views\\form\\formlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|solutionrelative:views\\form\\formlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|d:\\quiz_management\\views\\form\\formelement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|solutionrelative:views\\form\\formelement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|d:\\quiz_management\\views\\form\\formeditor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|solutionrelative:views\\form\\formeditor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|d:\\quiz_management\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|d:\\quiz_management\\views\\question\\question.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|solutionrelative:views\\question\\question.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|d:\\quiz_management\\wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{BE83CBD1-FF17-4B67-BEEA-FAB7B0DFB36A}|Quiz-Management.csproj|solutionrelative:wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,67 +26,42 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormEditor.cshtml",
-              "DocumentMoniker": "D:\\Quiz_Management\\Views\\Form\\FormEditor.cshtml",
-              "RelativeDocumentMoniker": "Views\\Form\\FormEditor.cshtml",
-              "ToolTip": "D:\\Quiz_Management\\Views\\Form\\FormEditor.cshtml",
-              "RelativeToolTip": "Views\\Form\\FormEditor.cshtml",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFAAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Question.cshtml",
+              "DocumentMoniker": "D:\\Quiz_Management\\Views\\Question\\Question.cshtml",
+              "RelativeDocumentMoniker": "Views\\Question\\Question.cshtml",
+              "ToolTip": "D:\\Quiz_Management\\Views\\Question\\Question.cshtml*",
+              "RelativeToolTip": "Views\\Question\\Question.cshtml*",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAmwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-20T05:58:58.794Z",
+              "WhenOpened": "2025-01-27T13:49:05.836Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormElement.cshtml",
-              "DocumentMoniker": "D:\\Quiz_Management\\Views\\Form\\FormElement.cshtml",
-              "RelativeDocumentMoniker": "Views\\Form\\FormElement.cshtml",
-              "ToolTip": "D:\\Quiz_Management\\Views\\Form\\FormElement.cshtml",
-              "RelativeToolTip": "Views\\Form\\FormElement.cshtml",
-              "ViewState": "AgIAABcBAAAAAAAAAAAAACABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-20T05:58:54.304Z",
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\Quiz_Management\\wwwroot\\assets\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\css\\style.css",
+              "ToolTip": "D:\\Quiz_Management\\wwwroot\\assets\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\assets\\css\\style.css",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-28T11:51:44.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormValidation.cshtml",
-              "DocumentMoniker": "D:\\Quiz_Management\\Views\\Form\\FormValidation.cshtml",
-              "RelativeDocumentMoniker": "Views\\Form\\FormValidation.cshtml",
-              "ToolTip": "D:\\Quiz_Management\\Views\\Form\\FormValidation.cshtml",
-              "RelativeToolTip": "Views\\Form\\FormValidation.cshtml",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAAANcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-20T05:58:42.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormLayout.cshtml",
-              "DocumentMoniker": "D:\\Quiz_Management\\Views\\Form\\FormLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Form\\FormLayout.cshtml",
-              "ToolTip": "D:\\Quiz_Management\\Views\\Form\\FormLayout.cshtml",
-              "RelativeToolTip": "Views\\Form\\FormLayout.cshtml",
-              "ViewState": "AgIAAA0BAAAAAAAAAAAAABcBAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-20T05:57:52.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Quiz_Management\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Quiz_Management\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABHAAAAAAAAAA==",
+              "ToolTip": "D:\\Quiz_Management\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-20T05:57:20.5Z",
+              "WhenOpened": "2025-01-28T11:41:26.123Z",
               "EditorCaption": ""
             }
           ]
