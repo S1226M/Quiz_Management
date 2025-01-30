@@ -27,11 +27,18 @@
 
     <!-- Template Main CSS File -->
     <link href="~/css/style.css" rel="stylesheet">
-    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/NiceAdmin.styles.css" asp-append-version="true" /> *@
+
+    <!-- =======================================================
+    * Template Name: NiceAdmin
+    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+    * Updated: Apr 20 2024 with Bootstrap v5.3.3
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
+
 <body>
+
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
@@ -264,70 +271,88 @@
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
-            
-            <!-- ======= Dashboard ======= -->
+
             <li class="nav-item">
-                <a class="nav-link " asp-controller="Home" asp-action="Index">
-                    <i class="bi bi-card-list"></i>
+                <a class="nav-link " href="index.html">
+                    <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
-            </li>
-            <!-- End Dashboard Nav -->
-            
-            <!-- ======= Question ======= -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="Question" asp-action="QuestionList">
-                    <i class="bi bi-card-list"></i>
-                    <span>Question</span>
-                </a>
-            </li>
-            <!-- End Question Nav -->
-            
-            <!-- ======= Quiz ======= -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="Quiz" asp-action="QuizList">
-                    <i class="bi bi-card-list"></i>
-                    <span>Quiz</span>
-                </a>
-            </li>
-            <!-- End Quiz Nav -->
-
-            <!-- ======= QuestionLevel ======= -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="Question" asp-action="QuestionList">
-                    <i class="bi bi-card-list"></i>
-                    <span>QuestionLevel</span>
-                </a>
-            </li>
-            <!-- End QuestionLevel Nav -->
-
-            <!-- ======= QuizWiseQuestion ======= -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="QuizWiseQuestion" asp-action="QuizWiseQuestionList">
-                    <i class="bi bi-card-list"></i>
-                    <span>QuizWiseQuestion</span>
-                </a>
-            </li>
-            <!-- End QuizWiseQuestion Nav -->
+            </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed"asp-controller="NewLogin" asp-action="NewUserLogin">
-                    <i class="bi bi-card-list"></i>
-                    <span>Registeration</span>
+                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-menu-button-wide"></i><span>Quiz</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                
-            </li>
+                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a asp-controller="Quiz" asp-action="QuizList">
+                            <i class="bi bi-circle"></i><span>QuizList</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Quiz" asp-action="QuizeAdd">
+                            <i class="bi bi-circle"></i><span>QuizAdd</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Quiz Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="Login" asp-action="LoginUser">
-                    <i class="bi bi-box-arrow-in-right"></i><span>Login</span>
+                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-journal-text"></i><span>Question</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a asp-controller="Question" asp-action="QuestionList">
+                            <i class="bi bi-circle"></i><span>QuestionList</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Question" asp-action="QuestionAdd">
+                            <i class="bi bi-circle"></i><span>QuestionAdd</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Forms Nav -->
 
-            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-layout-text-window-reverse"></i><span>QuizLevel</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a asp-controller="Question" asp-action="QuestionList">
+                            <i class="bi bi-circle"></i><span>QuizLevelList</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Question" asp-action="QuestionList">
+                            <i class="bi bi-circle"></i><span>QuizLevelAdd</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Tables Nav -->
 
-    </aside>
-    <!-- End Sidebar-->
-    
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-bar-chart"></i><span>QuizWiseQuestion</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a asp-controller="Question" asp-action="QuestionList">
+                            <i class="bi bi-circle"></i><span>QuizWiseQuestionList</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Question" asp-action="QuestionList">
+                            <i class="bi bi-circle"></i><span>QuizWiseQuestionAdd</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Charts Nav -->
+
+    </aside><!-- End Sidebar-->
+
     <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -347,7 +372,10 @@
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
     </footer><!-- End Footer -->
-    @await RenderSectionAsync("Scripts", required: false)
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
     <script src="~/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/vendor/chart.js/chart.umd.js"></script>
