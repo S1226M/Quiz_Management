@@ -266,18 +266,13 @@
             </ul>
         </nav><!-- End Icons Navigation -->
 
-    </header><!-- End Header -->
+    </header>
+    <!-- End Header -->
+    
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
-
-            <li class="nav-item">
-                <a class="nav-link " href="index.html">
-                    <i class="bi bi-grid"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
@@ -317,17 +312,17 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>QuizLevel</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-layout-text-window-reverse"></i><span>QuestionLevel</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a asp-controller="Question" asp-action="QuestionList">
-                            <i class="bi bi-circle"></i><span>QuizLevelList</span>
+                        <a asp-controller="QuestionLevel" asp-action="QuestionLevelList">
+                            <i class="bi bi-circle"></i><span>QuestionLevelList</span>
                         </a>
                     </li>
                     <li>
-                        <a asp-controller="Question" asp-action="QuestionList">
-                            <i class="bi bi-circle"></i><span>QuizLevelAdd</span>
+                        <a asp-controller="QuestionLevel" asp-action="QuestionLevelAdd">
+                            <i class="bi bi-circle"></i><span>QuestionLevelAdd</span>
                         </a>
                     </li>
                 </ul>
@@ -339,19 +334,20 @@
                 </a>
                 <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a asp-controller="Question" asp-action="QuestionList">
+                        <a asp-controller="QuizWiseQuestion" asp-action="QuizWiseQuestionList">
                             <i class="bi bi-circle"></i><span>QuizWiseQuestionList</span>
                         </a>
                     </li>
                     <li>
-                        <a asp-controller="Question" asp-action="QuestionList">
+                        <a asp-controller="QuizWiseQuestion" asp-action="QuizWiseQuestionAdd">
                             <i class="bi bi-circle"></i><span>QuizWiseQuestionAdd</span>
                         </a>
                     </li>
                 </ul>
             </li><!-- End Charts Nav -->
 
-    </aside><!-- End Sidebar-->
+    </aside>
+    <!-- End Sidebar-->
 
     <div class="container-fluid">
         <main role="main" class="pb-3">
