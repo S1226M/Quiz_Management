@@ -63,26 +63,30 @@ h6 {
 .pagetitle h1 {
   font-size: 24px;
   margin-bottom: 0;
+/*  margin-left: 13px;*/
   font-weight: 600;
   color: #012970;
 }
 
+/*    .pagetitle nav {
+        margin-left: 13px;
+    }*/
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: #4154f1;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
-}
+    .back-to-top {
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        right: 15px;
+        bottom: 15px;
+        z-index: 99999;
+        background: #4154f1;
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        transition: all 0.4s;
+    }
 
 .back-to-top i {
   font-size: 24px;
