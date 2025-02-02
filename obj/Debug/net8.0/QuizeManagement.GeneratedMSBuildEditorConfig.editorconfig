@@ -32,14 +32,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Quiz_Management/Views/Login/LoginUser.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5Vc2VyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Quiz_Management/Views/NewLogin/NewUserLogin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3TG9naW5cTmV3VXNlckxvZ2luLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Quiz_Management/Views/QuestionLevel/QuestionLevelAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25MZXZlbFxRdWVzdGlvbkxldmVsQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -72,8 +64,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxRdWl6TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Quiz_Management/Views/RegisterLoginLogout/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJMb2dpbkxvZ291dFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Quiz_Management/Views/RegisterLoginLogout/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJMb2dpbkxvZ291dFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Quiz_Management/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Quiz_Management/Views/Shared/_LayoutRegisterLoginLogout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRSZWdpc3RlckxvZ2luTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Quiz_Management/Views/Shared/_ValidationScriptsPartial.cshtml]

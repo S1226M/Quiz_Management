@@ -254,7 +254,7 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
+                            <a class="dropdown-item d-flex align-items-center" asp-controller="RegisterLoginLogout" asp-action="Login">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>
                             </a>
@@ -353,6 +353,19 @@
                 </ul>
             </li><!-- End Charts Nav -->
 
+
+            <li class="nav-item">
+                <a class="nav-link " asp-controller="RegisterLoginLogout" asp-action="Register">
+                    <i class="bi bi-grid"></i>
+                    <span>Register</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link " asp-controller="RegisterLoginLogout" asp-action="Login">
+                    <i class="bi bi-grid"></i>
+                    <span>Login</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
     </aside>
     <!-- End Sidebar-->
 
