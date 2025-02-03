@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace QuizeManagement.Models
 {
-    public class UserLogin
+    public class UserLoginModel
     {
         [Required]
         [DisplayName("Enter User Name")]

@@ -1,4 +1,7 @@
-﻿<main id="main" class="main">
+﻿@model DataTable
+@using System.Data
+
+<main id="main" class="main">
     <div class="pagetitle">
         <h1>Question Level List</h1>
         <nav>
@@ -66,39 +69,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>15</td>
-                            <td>101</td>
-                            <td>2002/08/04</td>
-                            <td>2002/08/06</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>25</td>
-                            <td>102</td>
-                            <td>2020/12/17</td>
-                            <td>2020/12/08</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>20</td>
-                            <td>103</td>
-                            <td>2021/09/12</td>
-                            <td>2021/09/15</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
+                        @foreach (DataRow row in Model.Rows)    
+                        {
+                            <tr>
+                                <td>@row["QuestionLevelID"]</td>
+                                <td>@row["QuestionLevel"]</td>
+                                <td>@row["UserID"]</td>
+                                <td>@row["Created"]</td>
+                                <td>@row["Modified"]</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
 

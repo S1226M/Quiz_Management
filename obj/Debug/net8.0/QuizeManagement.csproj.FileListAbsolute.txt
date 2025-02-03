@@ -101,3 +101,11 @@ D:\Quiz_Management\obj\Debug\net8.0\refint\QuizeManagement.dll
 D:\Quiz_Management\obj\Debug\net8.0\QuizeManagement.pdb
 D:\Quiz_Management\obj\Debug\net8.0\QuizeManagement.genruntimeconfig.cache
 D:\Quiz_Management\obj\Debug\net8.0\ref\QuizeManagement.dll
+D:\Quiz_Management\obj\Debug\net8.0\QuizeManagement.csproj.AssemblyReference.cache
+D:\Quiz_Management\bin\Debug\net8.0\System.Data.SqlClient.dll
+D:\Quiz_Management\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+D:\Quiz_Management\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+D:\Quiz_Management\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+D:\Quiz_Management\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+D:\Quiz_Management\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+D:\Quiz_Management\obj\Debug\net8.0\QuizeMan.840DE0B8.Up2Date

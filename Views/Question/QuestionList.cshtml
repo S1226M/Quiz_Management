@@ -1,4 +1,7 @@
-﻿<main id="main" class="main">
+﻿@model DataTable
+@using System.Data
+
+<main id="main" class="main">
     <div class="pagetitle">
         <h1>Question List</h1>
         <nav>
@@ -66,26 +69,19 @@
                     </thead>
                     <tbody id="questionTable">
                         <!-- Dynamic rows will be added here -->
-                        <tr>
-                            <td>1</td>
-                            <td>What is the capital of France?</td>
-                            <td>Easy</td>
-                            <td>5</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Explain the theory of relativity.</td>
-                            <td>Hard</td>
-                            <td>10</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
+                        @foreach (DataRow row in Model.Rows)
+                        {
+                            <tr>
+                                <td>@row["QuestionID"]</td>
+                                <td>@row["QuestionText"]</td>
+                                <td>@row["QuestionLevel"]</td>
+                                <td>@row["QuestionMarks"]</td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
