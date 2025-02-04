@@ -9,7 +9,6 @@ namespace QuizeManagement.Controllers
             return View();
         }
 
-        [HttpPost]
         public IActionResult Login()
         {
             return View();

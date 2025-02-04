@@ -27,6 +27,15 @@
                         <label for="inputdate" class="form-label">QuizDate</label>
                         <input type="date" class="form-control" id="inputdate">
                     </div>
+                    <div class="col-12">
+                        <label for="quizUser" class="form-label">User</label>
+                        <select id="quizUser" class="form-select">
+                            <option selected>Option A</option>
+                            <option>Option B</option>
+                            <option>Option C</option>
+                            <option>Option D</option>
+                        </select>
+                    </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Save</button>
                         <a class="btn btn-secondary" asp-controller="Quiz" asp-action="QuizList">Cancel</a>

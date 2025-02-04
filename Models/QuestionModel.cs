@@ -6,5 +6,6 @@
         public string QuestionText { get; set; }
         public string QuestionLevel { get; set; }
         public int QuestionMarks {  get; set; }
+        public string UserName { get; set; }
     }
 }

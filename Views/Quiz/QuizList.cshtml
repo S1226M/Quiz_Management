@@ -17,7 +17,7 @@
         <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">Search Quizzes</h5>
-                <form class="row g-3">
+                <form class="row g-3 align-items-end">
                     <div class="col-md-6">
                         <label for="quizName" class="form-label">Quiz Name</label>
                         <input type="text" class="form-control" id="quizName" placeholder="Enter quiz name">
@@ -26,9 +26,35 @@
                         <label for="quizDate" class="form-label">Quiz Date</label>
                         <input type="date" class="form-control" id="quizDate">
                     </div>
-                    <div class="col-md-3 d-flex align-items-end">
-                        <button type="button" class="btn btn-primary btn-custom mx-1">Search</button>
-                        <button type="reset" class="btn btn-secondary btn-custom mx-1">Reset</button>
+                    <div class="col-md-3">
+                        <label for="quizUser" class="form-label">User</label>
+                        <select id="quizUser" class="form-select">
+                            @foreach (DataRow row in Model.Rows)
+                            {
+                                <tr>
+                                    @* <td>@row["QuizID"]</td> *@
+                                    <option>@row["UserName"]</option>
+                                    @* <td>@row["QuizName"]</td> *@
+                                    @* <td>@row["TotalQuestions"]</td> *@
+                                    @* <td>@row["QuizDate"]</td> *@
+                                    @* <td>@row["UserName"]</td> *@
+                                    @* <td>@row["Created"]</td> *@
+                                    @* <td>@row["Modified"]</td> *@
+                                    <td>
+                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        @*     <option selected>Option A</option> *@
+                        @*     <option>Option B</option> *@
+                        @*     <option>Option C</option> *@
+                        @*     <option>Option D</option> *@
+                        </select>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-start">
+                        <button type="button" class="btn btn-primary mx-1">Search</button>
+                        <button type="reset" class="btn btn-secondary mx-1">Reset</button>
                     </div>
                 </form>
             </div>
@@ -46,13 +72,13 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            @* <th>#</th> *@
                             <th>Quiz Name</th>
                             <th>Total Questions</th>
                             <th>Quiz Date</th>
-                            <th>User ID</th>
-                            <th>Created</th>
-                            <th>Modified</th>
+                            <th>UserName</th>
+                            @* <th>Created</th> *@
+                            @* <th>Modified</th> *@
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -60,13 +86,13 @@
                         @foreach (DataRow row in Model.Rows)
                         {
                             <tr>
-                                <td>@row["UserID"]</td>
-                                <td>@row["UserName"]</td>
+                                @* <td>@row["QuizID"]</td> *@
+                                <td>@row["QuizName"]</td>
                                 <td>@row["TotalQuestions"]</td>
                                 <td>@row["QuizDate"]</td>
-                                <td>@row["UserID"]</td>
-                                <td>@row["Created"]</td>
-                                <td>@row["Modified"]</td>
+                                <td>@row["UserName"]</td>
+                                @* <td>@row["Created"]</td> *@
+                                @* <td>@row["Modified"]</td> *@
                                 <td>
                                     <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
                                     <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>

@@ -60,10 +60,11 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            @* <th>#</th> *@
                             <th>Question Text</th>
                             <th>Level</th>
                             <th>Marks</th>
+                            <th>UserName</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -72,10 +73,11 @@
                         @foreach (DataRow row in Model.Rows)
                         {
                             <tr>
-                                <td>@row["QuestionID"]</td>
+                                @* <td>@row["QuestionID"]</td> *@
                                 <td>@row["QuestionText"]</td>
                                 <td>@row["QuestionLevel"]</td>
                                 <td>@row["QuestionMarks"]</td>
+                                <td>@row["UserName"]</td>
                                 <td>
                                     <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
                                     <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>

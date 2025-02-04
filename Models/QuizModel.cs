@@ -6,7 +6,7 @@
         public string QuizName { get; set; }
         public string TotalQuestions { get; set; }
         public DateTime QuizDate { get; set; }
-        public int UserID { get; set; }
+        public int UserName { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified {  get; set; }
     }
