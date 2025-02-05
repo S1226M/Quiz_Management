@@ -12,36 +12,40 @@
             </ol>
         </nav>
     </div><!-- End Page Title -->
-    <div class="container mt-5">
+    <div class="container">
         <!-- Search Section -->
         <div class="card mb-4">
             <div class="card-body">
         <h5 class="card-title">Search Question</h5>
                 <form id="searchForm">
                     <div class="row g-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" id="searchText" placeholder="Enter question text">
+                        <div class="col-md-4">
+                            <label for="questionLevel" class="form-label">Select Question Level</label>
+                            <input type="text" class="form-control" id="searchText" placeholder="Question Level">
                         </div>
-                        <div class="col-md-3">
-                            <select class="form-select" id="searchLevel">
-                                <option value="">Select Level</option>
-                                <option value="1">Easy</option>
-                                <option value="2">Medium</option>
-                                <option value="3">Hard</option>
-                            </select>
+                        <div class="col-md-4">
+                            <label for="questionLevel" class="form-label">Question</label>
+                            <input type="text" class="form-control" id="searchText" placeholder="Enter Question">
                         </div>
-                        <div class="col-md-3">
-                            <table>
-                                <tr>
-                                    <td class="col-3">
-                                        <button type="button" class="btn btn-primary w-100" id="searchBtn">Search</button>
-                                    </td>
-                                    <td class="col-3">
-                                        <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
-                                    </td>
-                                </tr>
-
-                            </table>
+                        <div class="col-md-4">
+                            <label for="questionLevel" class="form-label">Min Mark</label>
+                            <input type="text" class="form-control" id="searchText" placeholder="Enter Min Marks">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="questionLevel" class="form-label">Max Mark</label>
+                            <input type="text" class="form-control" id="searchText" placeholder="Enter Max Marks">
+                        </div>
+                        @* <div class="col-md-3"> *@
+                        @*     <select class="form-select" id="searchLevel"> *@
+                        @*         <option value="">Select Level</option> *@
+                        @*         <option value="1">Easy</option> *@
+                        @*         <option value="2">Medium</option> *@
+                        @*         <option value="3">Hard</option> *@
+                        @*     </select> *@
+                        @* </div> *@
+                        <div class="col-md-10">
+                            <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
+                            <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
                         </div>
                     </div>
                 </form>
