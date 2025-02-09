@@ -2,17 +2,18 @@
 @using System.Data
 
 <main id="main" class="main">
-    <div class="pagetitle">
-        <h1>Question List</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="DashboardView">Home</a></li>
-                <li class="breadcrumb-item">Question</li>
-                <li class="breadcrumb-item active"><a asp-controller="Question" asp-action="QuestionList">QuestionList</a></li>
-            </ol>
-        </nav>
-    </div><!-- End Page Title -->
+    
     <div class="container">
+        <div class="pagetitle">
+            <h1>Question List</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="DashboardView">Home</a></li>
+                    <li class="breadcrumb-item">Question</li>
+                    <li class="breadcrumb-item active"><a asp-controller="Question" asp-action="QuestionList">QuestionList</a></li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
         <!-- Search Section -->
         <div class="card mb-4">
             <div class="card-body">
