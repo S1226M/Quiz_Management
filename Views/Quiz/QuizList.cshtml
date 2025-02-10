@@ -49,7 +49,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <h5 class="card-title">Quiz List</h5>
-                            <a class="btn btn-success" id="addQuiz" asp-controller="Quiz" asp-action="QuizeAdd">Add Quiz</a>
+                            <a class="btn btn-success" id="addQuiz" asp-controller="Quiz" asp-action="QuizAddEdit">Add Quiz</a>
                         </div>
                         <!-- Table with stripped rows -->
                         <table class="table table-striped">
@@ -70,7 +70,7 @@
                                         <td>@row["TotalQuestions"]</td>
                                         <td>@row["QuizDate"]</td>
                                         <td>
-                                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                            <a asp-controller="Quiz" asp-action="QuizAddEdit" asp-route-QuizID="@row["QuizID"]" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
                                             <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
                                         </td>
                                     </tr>
