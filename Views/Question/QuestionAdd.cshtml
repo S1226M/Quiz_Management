@@ -1,4 +1,6 @@
-﻿<main id="main" class="main">
+﻿@model QuizeManagement.Models.QuestionModel
+
+<main id="main" class="main">
     <div class="container">
         <div class="pagetitle">
             <h1>Question Add</h1>
@@ -15,28 +17,57 @@
                 <h5 class="card-title">Add New Question </h5>
                 <form class="row g-3">
                     <div class="col-12">
-                        <label for="inputquesation4" class="form-label"><span class="text-danger">*</span>Question text</label>
-                        <input type="text" class="form-control" id="inputquesation4">
+                        <label for="QuizSelect" class="form-label"><span class="text-danger">*</span>Select Quiz</label>
+                        <div class="row">
+                            <div class="col-12">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>-- Select User</option>
+                                    <option>Two</option>
+                                    <option>One</option>
+                                    <option>Three</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputOptionA4" class="form-label"><span class="text-danger">*</span>Option A </label>
-                        <input type="text" class="form-control" id="inputOptionA4">
+                        <label for="inputquesation4" asp-for="QuestionText" class="form-label"><span class="text-danger">*</span>Question text</label>
+                        <input type="text" asp-for="QuestionText" class="form-control" id="inputquesation4">
+                        <span asp-validation-for="QuestionText" class="text-danger"></span>
                     </div>
                     <div class="col-12">
-                        <label for="inputOptionB4" class="form-label"><span class="text-danger">*</span>Option B </label>
-                        <input type="text" class="form-control" id="inputOptionB4">
+                        <label for="inputOptionA4" asp-for="OptionA" class="form-label"><span class="text-danger">*</span>Option A </label>
+                        <input type="text" asp-for="OptionA" class="form-control" id="inputOptionA4">
+                        <span asp-validation-for="OptionA" class="text-danger"></span>
                     </div>
                     <div class="col-12">
-                        <label for="inputOptionC4" class="form-label"><span class="text-danger">*</span>Option C </label>
-                        <input type="text" class="form-control" id="inputOptionC4">
+                        <label for="inputOptionB4" asp-for="OptionB" class="form-label"><span class="text-danger">*</span>Option B </label>
+                        <input type="text" asp-for="OptionB" class="form-control" id="inputOptionB4">
+                        <span asp-validation-for="OptionB" class="text-danger"></span>
                     </div>
                     <div class="col-12">
-                        <label for="inputOptionD4" class="form-label"><span class="text-danger">*</span>Option D </label>
-                        <input type="text" class="form-control" id="inputOptionD4">
+                        <label for="inputOptionC4" asp-for="OptionC" class="form-label"><span class="text-danger">*</span>Option C </label>
+                        <input type="text" asp-for="OptionC" class="form-control" id="inputOptionC4">
+                        <span asp-validation-for="OptionC" class="text-danger"></span>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputOptionD4" asp-for="OptionD" class="form-label"><span class="text-danger">*</span>Option D </label>
+                        <input type="text" asp-for="OptionD" class="form-control" id="inputOptionD4">
+                        <span asp-validation-for="OptionD" class="text-danger"></span>
                     </div>
                     <div class="col-12"> 
-                        <label for="inputQuestions4" class="form-label"><span class="text-danger">*</span>Question Level</label>
-                        <input type="number" class="form-control" id="inputQuestions4"> 
+                        <label for="inputQuestions4" asp-for="QuestionLevel" class="form-label"><span class="text-danger">*</span>Question Level</label>
+                        <div class="row">
+                            <div class="col-12">
+                                <select asp-for="QuestionLevel" class="form-select" aria-label="Default select example">
+                                    <option selected>-- Select Level</option>
+                                    <option>Eassy</option>
+                                    <option>Medium</option>
+                                    <option>Hard</option>
+                                </select>
+                            </div>
+                        </div>
+                        @* <input type="number" asp-for="QuestionLevel" class="form-control" id="inputQuestions4"> *@
+                        <span asp-validation-for="QuestionLevel" class="text-danger"></span>
                     </div>
                     @* <div class="col-12"> *@
                     @*     <label for="inputState" class="form-label">Correct Option</label> *@
@@ -48,12 +79,14 @@
                     @*     </select> *@
                     @* </div>                     *@
                     <div class="col-12">
-                        <label for="inputQuestionsMark4" class="form-label"><span class="text-danger">*</span>Question Mark</label>
-                        <input type="number" class="form-control" id="inputQuestionsMark4">
+                        <label for="inputQuestionsMark4" asp-for="QuestionMarks" class="form-label"><span class="text-danger">*</span>Question Mark</label>
+                        <input type="number" asp-for="QuestionMarks" class="form-control" id="inputQuestionsMark4">
+                        <span asp-validation-for="QuestionMarks" class="text-danger"></span>
                     </div>
                     <div class="col-12">
-                        <label for="inputCorrect" class="form-label"><span class="text-danger">*</span>Correct Option</label>
-                        <input type="number" class="form-control" id="inputQuestions4">
+                        <label for="inputCorrect" asp-for="CorrectOption" class="form-label"><span class="text-danger">*</span>Correct Option</label>
+                        <input type="number" asp-for="CorrectOption" class="form-control" id="inputQuestions4">
+                        <span asp-validation-for="CorrectOption" class="text-danger"></span>
                     </div>
                     @* <div class="col-6"> *@
                     @*     <label for="inputState" class="form-label">UserID</label> *@

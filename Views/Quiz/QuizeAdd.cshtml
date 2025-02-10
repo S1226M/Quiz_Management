@@ -1,4 +1,5 @@
-﻿<main id="main" class="main">
+﻿@model QuizeManagement.Models.QuizModel
+<main id="main" class="main">
     <div class="container">
         <div class="pagetitle">
             <h1>Quiz Add</h1>
@@ -15,17 +16,32 @@
                 <h5 class="card-title">Add New Quiz </h5>
                 <form class="row g-3">
                     <div class="col-12">
-                        <label for="inputName4" class="form-label"><span class="text-danger">*</span>Quiz Name</label>
-                        <input type="text" class="form-control" id="inputName4">
+                        <label for="inputName4" asp-for="QuizName" class="form-label"><span class="text-danger">*</span>Quiz Name</label>
+                        <input type="text" asp-for="QuizName" class="form-control" id="inputName4">
+                        <span asp-validation-for="QuizName" class="text-danger"></span>
                     </div>
                     <div class="col-12">
-                        <label for="inputQuestions4" class="form-label"><span class="text-danger">*</span>TotalQuestions</label>
-                        <input type="number" class="form-control" id="inputQuestions4">
+                        <label for="inputQuestions4" asp-for="TotalQuestions" class="form-label"><span class="text-danger">*</span>TotalQuestions</label>
+                        <input type="number" asp-for="TotalQuestions" class="form-control" id="inputQuestions4">
+                        <span asp-validation-for="TotalQuestions" class="text-danger"></span>
                     </div>
                     <div class="col-12">
-
-                        <label for="inputdate" class="form-label"><span class="text-danger">*</span>QuizDate</label>
-                        <input type="date" class="form-control" id="inputdate">
+                        <label for="UserName" class="form-label"><span class="text-danger">*</span>UserName</label>
+                        <div class="row">
+                            <div class="col-12">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>-- Select User</option>
+                                    <option>Two</option>
+                                    <option>One</option>
+                                    <option>Three</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputdate" asp-for="QuizDate" class="form-label"><span class="text-danger">*</span>QuizDate</label>
+                        <input type="date" asp-for="QuizDate" class="form-control" id="inputdate">
+                        <span asp-validation-for="QuizDate" class="text-danger"></span>
                     </div>
                     @* <div class="col-12"> *@
                     @*     <label for="quizUser" class="form-label">User</label> *@

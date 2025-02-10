@@ -1,4 +1,5 @@
-﻿<main id="main" class="main">
+﻿@model QuizeManagement.Models.QuestionLevelModel
+<main id="main" class="main">
     <div class="container">
         <div class="pagetitle">
             <h1>Question Level Add</h1>
@@ -16,9 +17,10 @@
                 <h5 class="card-title">Add New Question </h5>
                 <form class="row g-3">
                     <div class="col-12">
-                        <label for="inputquesation4" class="form-label"><span class="text-danger">*</span>Question Level</label>
+                        <label for="inputquesation4" asp-for="QuestionLevel" class="form-label"><span class="text-danger">*</span>Question Level</label>
                         @* <input type="text" class="form-control" id="inputquesation4"> *@
-                        <input type="text" class="form-control  " required placeholder="Question Level ( e.g. :- Easy , Medium , Hard)">
+                        <input type="text" asp-for="QuestionLevel" class="form-control  " required placeholder="Question Level ( e.g. :- Easy , Medium , Hard)">
+                        <span asp-validation-for="QuestionLevel" class="text-danger"></span>
                     </div>
                     @* <div class="col-12"> *@
                     @*     <label for="inputQuestions4" class="form-label">User ID</label> *@

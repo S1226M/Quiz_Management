@@ -1,12 +1,17 @@
-﻿namespace QuizeManagement.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
+
+namespace QuizeManagement.Models
 {
     public class QuestionLevelModel
     {
-        public int QuestionLevelID { get; set; }
 
+        [Required(ErrorMessage = "Country Name Require")]
+        public int QuestionLevelID { get; set; }
+        [Required(ErrorMessage = "Question Level is Require")]
         public string QuestionLevel { get; set; }
         public string QuestionText { get; set; }
-
+         
         public int UserID { get; set; }
         public string UserName { get; set; }
 

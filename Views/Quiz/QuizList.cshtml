@@ -16,7 +16,7 @@
         <!-- Search Section -->
         <div class="card mb-4">
             <div class="card-body">
-                <h5 class="card-title">Search Quizzes</h5>
+                <h5 class="card-title">Search Quiz</h5>
                 <form class="row g-3 align-items-end">
                     <div class="col-md-6">
                         <label for="quizName" class="form-label">Quiz Name</label>
@@ -31,48 +31,17 @@
                         <input type="number" class="form-control" id="maxQue" placeholder="Enter max Question">
                     </div>
                     <div class="col-md-3">
-                        <label for="quizDate" class="form-label">From Quiz Date</label>
+                        <label for="quizDate" class="form-label">Quiz Date</label>
                         <input type="date" class="form-control" id="quizDate">
                     </div>
-                    <div class="col-md-3">
-                        <label for="quizDate" class="form-label">To Quiz Date</label>
-                        <input type="date" class="form-control" id="quizDate">
-                    </div>
-
-                    @* <div class="col-md-3"> *@
-                    @* <label for="quizUser" class="form-label">User</label> *@
-                    @* <select id="quizUser" class="form-select"> *@
-                    @* @foreach (DataRow row in Model.Rows) *@
-                    @* { *@
-                    @* <tr> *@
-                    @* <td>@row["QuizID"]</td> *@
-                    @* <option>@row["UserName"]</option> *@
-                    @* <td>@row["QuizName"]</td> *@
-                    @* <td>@row["TotalQuestions"]</td> *@
-                    @* <td>@row["QuizDate"]</td> *@
-                    @* <td>@row["UserName"]</td> *@
-                    @* <td>@row["Created"]</td> *@
-                    @* <td>@row["Modified"]</td> *@
-                    @* <td> *@
-                    @* <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a> *@
-                    @* <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a> *@
-                    @* </td> *@
-                    @* </tr> *@
-                    @* } *@
-                    @*     <option selected>Option A</option> *@
-                    @*     <option>Option B</option> *@
-                    @*     <option>Option C</option> *@
-                    @*     <option>Option D</option> *@
-                    @* </select> *@
-                    @* </div> *@
-
-                    <div class="col-md-7 d-flex justify-content-start">
+                    <div class="d-flex justify-content-start">
                         <button type="button" class="btn btn-primary mx-1">Search</button>
                         <button type="reset" class="btn btn-secondary mx-1">Reset</button>
                     </div>
                 </form>
             </div>
         </div>
+
         <div class="row">
             <div class="col-lg-12">
 
@@ -83,7 +52,7 @@
                             <a class="btn btn-success" id="addQuiz" asp-controller="Quiz" asp-action="QuizeAdd">Add Quiz</a>
                         </div>
                         <!-- Table with stripped rows -->
-                        <table class="table datatable">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th>Quiz Name</th>
@@ -92,7 +61,8 @@
                                     <th>Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="questionTable">
+                                <!-- Dynamic rows will be added here -->
                                 @foreach (DataRow row in Model.Rows)
                                 {
                                     <tr>
@@ -105,326 +75,9 @@
                                         </td>
                                     </tr>
                                 }
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a><a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Unity Pugh</td>
-                                    <td>9958</td>
-                                    <td>Curicó</td>
-                                    <td><a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a></td>
-                                </tr>
                             </tbody>
                         </table>
+
                         <!-- End Table with stripped rows -->
 
                     </div>
