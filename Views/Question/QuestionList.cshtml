@@ -93,10 +93,9 @@
                                                 @row["QuestionLevel"]
                                 </td>
                                 <td>@row["QuestionMarks"]</td>
-                                @* <td>@row["UserName"]</td> *@
                                 <td>
                                     <a asp-controller="Question" asp-action="QuestionAddEdit" asp-route-QuestionID="@row["QuestionID"]" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                    <a asp-controller="Question" asp-action="QuestionDelete" asp-route-QuestionID="@row["QuestionID"]" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
                                 </td>
                             </tr>
                         }

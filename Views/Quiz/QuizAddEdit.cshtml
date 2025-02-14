@@ -26,12 +26,27 @@
                         <label for="inputQuestions4" asp-for="TotalQuestions" class="form-label"><span class="text-danger">*</span>TotalQuestions</label>
                         <input type="number" asp-for="TotalQuestions" class="form-control" id="inputQuestions4">
                         <span asp-validation-for="TotalQuestions" class="text-danger"></span>
-                    </div>  
-                    <div class="col-12">
-                        <label for="inputQuestions4" asp-for="UserID" class="form-label"><span class="text-danger">*</span>User ID</label>
-                        <input type="number" asp-for="UserID" class="form-control" id="inputQuestions4">
-                        <span asp-validation-for="UserID" class="text-danger"></span>
                     </div>
+
+                    @* <div class="mb-3"> *@
+                    @*     <span class="text-danger">*</span> *@
+                    @*     <label class="form-label">User ID</label> *@
+                    @*     <select asp-for="UserID" class="form-select"> *@
+                    @*         <option value="">-- Select Level --</option> *@
+                    @*         @foreach (var level in ViewBag.UserID) *@
+                    @*         { *@
+                    @*             <option value="@level.UserID">@level.QuizName</option> *@
+                    @*         } *@
+                    @*     </select> *@
+                    @*     <span asp-validation-for="UserID" class="text text-danger"></span> *@
+                    @* </div> *@
+                    
+                    <div class="col-12">
+                         <label for="inputQuestions4" asp-for="UserID" class="form-label"><span class="text-danger">*</span>User ID</label>
+                         <input type="number" asp-for="UserID" class="form-control" id="inputQuestions4">
+                         <span asp-validation-for="UserID" class="text-danger"></span>
+                     </div>
+
                     @* <div class="col-12"> *@
                     @*     <label for="UserName" class="form-label"><span class="text-danger">*</span>UserName</label> *@
                     @*     <div class="row"> *@

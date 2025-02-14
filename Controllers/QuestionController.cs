@@ -118,5 +118,18 @@ namespace QuizeManagement.Controllers
             table.Load(reader);
             return View(table);
         }
+
+        public IActionResult QuestionDelete(int QuestionID)
+        {
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand Command = connection.CreateCommand();
+            Command.CommandType = CommandType.StoredProcedure;
+            Command.CommandText = "PR_MST_Question_Delete";
+            Command.Parameters.Add("@QuestionID", SqlDbType.Int).Value = QuestionID;
+            Command.ExecuteNonQuery();
+            return RedirectToAction("QuestionList");
+        }
     }
 }
