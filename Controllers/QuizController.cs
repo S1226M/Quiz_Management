@@ -12,6 +12,8 @@ namespace QuizeManagement.Controllers
         {
             configuration = _configuration;
         }
+
+        #region Quiz List
         public IActionResult QuizList()
         {
             string connectionString = configuration.GetConnectionString("ConnectionString");
@@ -25,6 +27,9 @@ namespace QuizeManagement.Controllers
             table.Load(reader);
             return View(table);
         }
+        #endregion Quiz List
+
+        #region Quiz Add
         public IActionResult QuizSave(QuizModel model)
         {
             if (ModelState.IsValid)
@@ -52,7 +57,9 @@ namespace QuizeManagement.Controllers
             }
             return View("QuizAddEdit", model);
         }
+        #endregion Quiz Add
 
+        #region Quiz Edit
         public IActionResult QuizAddEdit(int QuizID)
         {
             string connectionString = configuration.GetConnectionString("ConnectionString");
@@ -75,5 +82,22 @@ namespace QuizeManagement.Controllers
             }
             return View("QuizAddEdit", model);
         }
+        #endregion Quiz Edit
+
+        #region Quiz Delete
+        public IActionResult QuizDelete(int QuizID)
+        {
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand Command = connection.CreateCommand();
+            Command.CommandType = CommandType.StoredProcedure;
+            Command.CommandText = "PR_MST_Quiz_Delete";
+            Command.Parameters.Add("@QuizID",SqlDbType.Int).Value = QuizID;
+            Command.ExecuteNonQuery();
+            return RedirectToAction("QuizList");
+        }
+        #endregion Quiz Delete
+
     }
 }

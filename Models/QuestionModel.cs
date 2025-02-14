@@ -14,13 +14,15 @@ namespace QuizeManagement.Models
         public string OptionC { get; set; }
         [Required(ErrorMessage = "Option D Requied")]
         public string OptionD { get; set; }
-        [Required(ErrorMessage = "Option Level Requied")]
-        public string QuestionLevel { get; set; }
+        //[Required(ErrorMessage = "Option Level Requied")]
+        public string? QuestionLevel { get; set; }
         [Required(ErrorMessage = "Option Mark Requied")]
         public int QuestionMarks {  get; set; }
         [Required(ErrorMessage = "Correct Option Requied")]
         public string CorrectOption { get; set; }
-        public string QuestionID { get; set; }
-        public string UserName { get; set; }
+        public int QuestionID { get; set; }
+        public string? UserName { get; set; }
+        public int UserID { get; set; }
+        public int QuestionLevelID { get; set; }
     }
 }

@@ -71,7 +71,13 @@
                                         <td>@row["QuizDate"]</td>
                                         <td>
                                             <a asp-controller="Quiz" asp-action="QuizAddEdit" asp-route-QuizID="@row["QuizID"]" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                            <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                            
+                                            <form method="post" asp-controller="Quiz" asp-action="QuizDelete" onsubmit="return confirmDelete()" style="display:inline;">
+                                                <input type="hidden" name="QuizID" value="@row["QuizID"]" />
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 }

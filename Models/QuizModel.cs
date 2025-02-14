@@ -21,5 +21,6 @@ namespace QuizeManagement.Models
         public int UserName { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified {  get; set; }
+        public int QuestionID { get; internal set; }
     }
 }

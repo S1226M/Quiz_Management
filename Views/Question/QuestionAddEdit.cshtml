@@ -1,5 +1,6 @@
 ﻿@model QuizeManagement.Models.QuestionModel
 
+
 <main id="main" class="main">
     <div class="container">
         <div class="pagetitle">
@@ -15,20 +16,8 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Add New Question </h5>
-                <form class="row g-3">
-                    <div class="col-12">
-                        <label for="QuizSelect" class="form-label"><span class="text-danger">*</span>Select Quiz</label>
-                        <div class="row">
-                            <div class="col-12">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>-- Select User</option>
-                                    <option>Two</option>
-                                    <option>One</option>
-                                    <option>Three</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                <form class="row g-3" asp-controller="Question" asp-action="QuestionSave" method="post">
+                    <input hidden asp-for="QuestionID" />
                     <div class="col-12">
                         <label for="inputquesation4" asp-for="QuestionText" class="form-label"><span class="text-danger">*</span>Question text</label>
                         <input type="text" asp-for="QuestionText" class="form-control" id="inputquesation4">
@@ -54,21 +43,21 @@
                         <input type="text" asp-for="OptionD" class="form-control" id="inputOptionD4">
                         <span asp-validation-for="OptionD" class="text-danger"></span>
                     </div>
-                    <div class="col-12"> 
-                        <label for="inputQuestions4" asp-for="QuestionLevel" class="form-label"><span class="text-danger">*</span>Question Level</label>
-                        <div class="row">
-                            <div class="col-12">
-                                <select asp-for="QuestionLevel" class="form-select" aria-label="Default select example">
-                                    <option selected>-- Select Level</option>
-                                    <option>Eassy</option>
-                                    <option>Medium</option>
-                                    <option>Hard</option>
-                                </select>
-                            </div>
-                        </div>
-                        @* <input type="number" asp-for="QuestionLevel" class="form-control" id="inputQuestions4"> *@
-                        <span asp-validation-for="QuestionLevel" class="text-danger"></span>
-                    </div>
+                    @* <div class="col-12">  *@
+                    @*     <label for="inputQuestions4" asp-for="QuestionLevel" class="form-label"><span class="text-danger">*</span>Question Level</label> *@
+                    @*     <div class="row"> *@
+                    @*         <div class="col-12"> *@
+                    @*             <select asp-for="QuestionLevel" class="form-select" aria-label="Default select example"> *@
+                    @*                 <option selected>-- Select Level</option> *@
+                    @*                 <option>Eassy</option> *@
+                    @*                 <option>Medium</option> *@
+                    @*                 <option>Hard</option> *@
+                    @*             </select> *@
+                    @*         </div> *@
+                    @*     </div> *@
+                    @*     @* <input type="number" asp-for="QuestionLevel" class="form-control" id="inputQuestions4"> *@
+                    @*     <span asp-validation-for="QuestionLevel" class="text-danger"></span> *@
+                    @* </div> *@
                     @* <div class="col-12"> *@
                     @*     <label for="inputState" class="form-label">Correct Option</label> *@
                     @*     <select id="inputState" class="form-select"> *@
@@ -77,7 +66,7 @@
                     @*         <option>Option c</option> *@
                     @*         <option>Option D</option> *@
                     @*     </select> *@
-                    @* </div>                     *@
+                    @* </div>  *@
                     <div class="col-12">
                         <label for="inputQuestionsMark4" asp-for="QuestionMarks" class="form-label"><span class="text-danger">*</span>Question Mark</label>
                         <input type="number" asp-for="QuestionMarks" class="form-control" id="inputQuestionsMark4">
@@ -85,10 +74,10 @@
                     </div>
                     <div class="col-12">
                         <label for="inputCorrect" asp-for="CorrectOption" class="form-label"><span class="text-danger">*</span>Correct Option</label>
-                        <input type="number" asp-for="CorrectOption" class="form-control" id="inputQuestions4">
+                        <input type="text" asp-for="CorrectOption" class="form-control" id="inputQuestions4">
                         <span asp-validation-for="CorrectOption" class="text-danger"></span>
                     </div>
-                    @* <div class="col-6"> *@
+                    @* <div class="col-6"> *@   
                     @*     <label for="inputState" class="form-label">UserID</label> *@
                     @*     <select id="inputState" class="form-select"> *@
                     @*         <option selected>Option A</option> *@
@@ -112,6 +101,23 @@
                     @*         </div> *@
                     @*     </div> *@
                     @* </div> *@
+                    <div class="col-12">
+                        <label for="inputOptionB4" asp-for="UserID" class="form-label"><span class="text-danger">*</span>UserID</label>
+                        <input type="text" asp-for="UserID" class="form-control" id="inputOptionB4">
+                        <span asp-validation-for="UserID" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-danger">*</span>
+                        <label class="form-label">Question Level</label>
+                        <select asp-for="QuestionLevelID" class="form-select">
+                            <option value="">-- Select Level --</option>
+                            @foreach (var level in ViewBag.QuestionLevel)
+                            {
+                                <option value="@level.QuestionLevelID">@level.QuestionLevel</option>
+                            }
+                        </select>
+                        <span asp-validation-for="QuestionLevelID" class="text text-danger"></span>
+                    </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Save</button>
                         <a class="btn btn-secondary" asp-controller="Question" asp-action="QuestionList">Cancel</a>
