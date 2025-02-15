@@ -98,6 +98,5 @@ namespace QuizeManagement.Controllers
             return RedirectToAction("QuizList");
         }
         #endregion Quiz Delete
-
     }
 }

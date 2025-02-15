@@ -12,6 +12,8 @@ namespace QuizeManagement.Controllers
         {
             configuration = _configuration;
         }
+
+        #region User List
         public IActionResult UsersView()
         {
             string connectionString = configuration.GetConnectionString("ConnectionString");
@@ -25,5 +27,6 @@ namespace QuizeManagement.Controllers
             table.Load(reader);
             return View(table);
         }
+        #endregion User List
     }
 }

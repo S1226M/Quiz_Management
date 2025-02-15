@@ -22,5 +22,6 @@ namespace QuizeManagement.Models
         public DateTime Created { get; set; }
         public DateTime Modified {  get; set; }
         public int QuestionID { get; internal set; }
+        public string? QuestionLevel { get; internal set; }
     }
 }

@@ -12,7 +12,6 @@ namespace QuizeManagement.Models
         [Required(ErrorMessage = "Question Level is Require")]
         public string QuestionLevel { get; set; }
       
-        
         public string QuestionText { get; set; }
 
         public int UserID { get; set; }
