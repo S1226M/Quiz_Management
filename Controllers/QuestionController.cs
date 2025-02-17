@@ -2,6 +2,7 @@
 using System.Data;
 using Microsoft.AspNetCore.Mvc;
 using QuizeManagement.Models;
+using static QuizeManagement.Models.UserModel;
 
 
 namespace QuizeManagement.Controllers
@@ -22,6 +23,7 @@ namespace QuizeManagement.Controllers
             if (ModelState.IsValid)
             {
                 QuestionLevelDropDown();
+                QuestionUserDropDown();
                 string connectionString = configuration.GetConnectionString("ConnectionString");
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
@@ -51,6 +53,7 @@ namespace QuizeManagement.Controllers
                 return RedirectToAction("QuestionList");
             }
             QuestionLevelDropDown();
+            QuestionUserDropDown();
             return View("QuestionAddEdit", model);
         }
         #endregion Question Add
@@ -59,6 +62,7 @@ namespace QuizeManagement.Controllers
         public IActionResult QuestionAddEdit(int QuestionID)
         {
             QuestionLevelDropDown();
+            QuestionUserDropDown();
             string connectionString = configuration.GetConnectionString("ConnectionString");
             SqlConnection Connection = new SqlConnection(connectionString);
             Connection.Open();
@@ -111,6 +115,30 @@ namespace QuizeManagement.Controllers
             ViewBag.QuestionLevel = list;
         }
         #endregion Question Dropdown
+
+        #region User Dropdown
+        public void QuestionUserDropDown()
+        {
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "Dropdown_MST_User";
+            SqlDataReader reader = command.ExecuteReader();
+            DataTable dataTable = new DataTable();
+            dataTable.Load(reader);
+            List<UserDropdownModel> list = new List<UserDropdownModel>();
+            foreach (DataRow data in dataTable.Rows)
+            {
+                UserDropdownModel model = new UserDropdownModel();
+                model.UserID = Convert.ToInt32(data["UserID"]);
+                model.UserName = data["UserName"].ToString();
+                list.Add(model);
+            }
+            ViewBag.User = list;
+        }
+        #endregion User Dropdown
 
         #region Question List
         public IActionResult QuestionList()

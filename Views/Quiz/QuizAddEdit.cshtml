@@ -41,11 +41,25 @@
                     @*     <span asp-validation-for="UserID" class="text text-danger"></span> *@
                     @* </div> *@
                     
-                    <div class="col-12">
-                         <label for="inputQuestions4" asp-for="UserID" class="form-label"><span class="text-danger">*</span>User ID</label>
-                         <input type="number" asp-for="UserID" class="form-control" id="inputQuestions4">
-                         <span asp-validation-for="UserID" class="text-danger"></span>
-                     </div>
+                    @* <div class="col-12"> *@
+                    @*      <label for="inputQuestions4" asp-for="UserID" class="form-label"><span class="text-danger">*</span>User ID</label> *@
+                    @*      <input type="number" asp-for="UserID" class="form-control" id="inputQuestions4"> *@
+                    @*      <span asp-validation-for="UserID" class="text-danger"></span> *@
+                    @*  </div> *@
+
+                    <div class="mb-3">
+                        <span class="text-danger">*</span>
+                        <label class="form-label">User Name</label>
+                        <select asp-for="UserID" class="form-select">
+                            <option>-- Select User Name --</option>
+                            @foreach (var level in ViewBag.User)
+                            {
+                                <option value="@level.UserID">@level.UserName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="UserID" class="text text-danger"></span>
+                    </div>
+
 
                     @* <div class="col-12"> *@
                     @*     <label for="UserName" class="form-label"><span class="text-danger">*</span>UserName</label> *@

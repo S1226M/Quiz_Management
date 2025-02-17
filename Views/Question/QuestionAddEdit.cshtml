@@ -101,11 +101,25 @@
                     @*         </div> *@
                     @*     </div> *@
                     @* </div> *@
-                    <div class="col-12">
-                        <label for="inputOptionB4" asp-for="UserID" class="form-label"><span class="text-danger">*</span>UserID</label>
-                        <input type="text" asp-for="UserID" class="form-control" id="inputOptionB4">
-                        <span asp-validation-for="UserID" class="text-danger"></span>
+                    @* <div class="col-12"> *@
+                    @*     <label for="inputOptionB4" asp-for="UserID" class="form-label"><span class="text-danger">*</span>UserID</label> *@
+                    @*     <input type="text" asp-for="UserID" class="form-control" id="inputOptionB4"> *@
+                    @*     <span asp-validation-for="UserID" class="text-danger"></span> *@
+                    @* </div> *@
+
+                    <div class="mb-3">
+                        <span class="text-danger">*</span>
+                        <label class="form-label">User Name</label>
+                        <select asp-for="UserID" class="form-select">
+                            <option>-- Select User Name --</option>
+                            @foreach (var level in ViewBag.User)
+                            {
+                                <option value="@level.UserID">@level.UserName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="UserID" class="text text-danger"></span>
                     </div>
+
                     <div class="mb-3">
                         <span class="text-danger">*</span>
                         <label class="form-label">Question Level</label>
@@ -118,6 +132,7 @@
                         </select>
                         <span asp-validation-for="QuestionLevelID" class="text text-danger"></span>
                     </div>
+
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Save</button>
                         <a class="btn btn-secondary" asp-controller="Question" asp-action="QuestionList">Cancel</a>
