@@ -7,19 +7,19 @@ namespace QuizeManagement.Models
     {
         public int UserID { get; set; }
 
-        [Required(ErrorMessage ="Name is require")]
+        [Required(ErrorMessage ="Name is required")]
         [DisplayName("Enter User Name")]
         public string UserName { get; set; }
 
-        [Required(ErrorMessage = "Password is require")]
+        [Required(ErrorMessage = "Password is required")]
         [DisplayName("Enter User Password")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Name is require")]
+        [Required(ErrorMessage = "Name is required")]
         [DisplayName("Enter User Name")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Name is require")]
+        [Required(ErrorMessage = "Name is required")]
         [DisplayName("Enter User Name")]
 
         [MaxLength(10)]

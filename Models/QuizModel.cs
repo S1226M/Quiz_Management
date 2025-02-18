@@ -5,18 +5,19 @@ namespace QuizeManagement.Models
 {
     public class QuizModel
     {
-        [Required(ErrorMessage = "User ID Require")]
+        [Required(ErrorMessage = "User ID Required")]
         public int UserID { get; set; }
 
         public int QuizID { get; set; }
 
-        [Required(ErrorMessage = "Quiz Name Require")]
+        [Required(ErrorMessage = "Quiz Name Required")]
         public string QuizName { get; set; }
 
-        [Required(ErrorMessage = "Total Question Name Require")]
+        [Required(ErrorMessage = "Total Question Name Required")]
+        [Range(1,100 ,ErrorMessage = "Total Questions must greater then 0.")]
         public int TotalQuestions { get; set; }
 
-        [Required(ErrorMessage = "Quiz Date Require")]
+        [Required(ErrorMessage = "Quiz Date Required")]
         public DateTime QuizDate { get; set; }
         public int UserName { get; set; }
         public DateTime Created { get; set; }

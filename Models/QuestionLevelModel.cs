@@ -5,10 +5,10 @@ namespace QuizeManagement.Models
 {
     public class QuestionLevelModel
     {
-        [Required(ErrorMessage = "Country Name is Require")]
+        [Required(ErrorMessage = "Country Name is Required")]
         public int QuestionLevelID { get; set; }
 
-        [Required(ErrorMessage = "Question Level is Require")]
+        [Required(ErrorMessage = "Question Level is Required")]
         public string QuestionLevel { get; set; }
       
         public string? QuestionText { get; set; }
