@@ -32,4 +32,9 @@ namespace QuizeManagement.Models
         [Required(ErrorMessage = "Question Level is required")]
         public int QuestionLevelID { get; set; }
     }
+    public class QuestionDropdownModel
+    {
+        public int QuestionID { get; set; }
+        public string QuestionText { get; set; }
+    }
 }

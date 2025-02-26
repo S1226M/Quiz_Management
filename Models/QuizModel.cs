@@ -27,6 +27,12 @@ namespace QuizeManagement.Models
         public string? QuestionLevel { get; internal set; }
     }
 
+    public class QuizDropdownModel
+    {
+        public int QuizID { get; set; }
+        public string QuizName { get; set; }
+    }
+
     public class FutureDateAttribute : ValidationAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
