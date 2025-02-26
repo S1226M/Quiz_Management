@@ -51,7 +51,7 @@
                         <span class="text-danger">*</span>
                         <label class="form-label">User Name</label>
                         <select asp-for="UserID" class="form-select">
-                            <option>-- Select User Name --</option>
+                            <option value="">-- Select User Name --</option>
                             @foreach (var level in ViewBag.User)
                             {
                                 <option value="@level.UserID">@level.UserName</option>
@@ -76,7 +76,7 @@
                     @* </div> *@
                     <div class="col-12">
                         <label for="inputdate" asp-for="QuizDate" class="form-label"><span class="text-danger">*</span>QuizDate</label>
-                        <input type="date" asp-for="QuizDate" class="form-control" id="inputdate">
+                        <input type="date" asp-for="QuizDate" class="form-control" id="inputdate" min="@DateTime.Today.ToString("yyyy-MM-dd")">
                         <span asp-validation-for="QuizDate" class="text-danger"></span>
                     </div>
                     @* <div class="col-12"> *@

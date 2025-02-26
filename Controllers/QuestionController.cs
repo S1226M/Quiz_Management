@@ -29,7 +29,7 @@ namespace QuizeManagement.Controllers
                 sqlConnection.Open();
                 SqlCommand command = sqlConnection.CreateCommand();
                 command.CommandType = CommandType.StoredProcedure;
-                if(model.QuestionID != null)
+                if(model.QuestionID == 0)
                 {
                     command.CommandText = "PR_MST_Question_Insert";
                 }
@@ -52,9 +52,12 @@ namespace QuizeManagement.Controllers
 
                 return RedirectToAction("QuestionList");
             }
-            QuestionLevelDropDown();
-            QuestionUserDropDown();
-            return View("QuestionAddEdit", model);
+            else
+            {
+                QuestionLevelDropDown();
+                QuestionUserDropDown();
+                return View("QuestionAddEdit", model);
+            }
         }
         #endregion Question Add
 
@@ -92,7 +95,7 @@ namespace QuizeManagement.Controllers
         }
         #endregion Question Edit
 
-        #region Question Dropdown
+        #region Question level Dropdown
         public void QuestionLevelDropDown()
         {
             string connectionString = configuration.GetConnectionString("ConnectionString");

@@ -13,6 +13,7 @@ namespace QuizeManagement.Models
       
         public string? QuestionText { get; set; }
 
+        [Required(ErrorMessage = "User name is Required")]
         public int UserID { get; set; }
         public string? UserName { get; set; }
 

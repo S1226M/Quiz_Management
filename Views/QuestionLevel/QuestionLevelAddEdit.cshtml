@@ -35,7 +35,7 @@
                         <span class="text-danger">*</span>
                         <label class="form-label">User Name</label>
                         <select asp-for="UserID" class="form-select">
-                            <option>-- Select User Name --</option>
+                            <option value="">-- Select User Name --</option>
                             @foreach (var level in ViewBag.User)
                             {
                                 <option value="@level.UserID">@level.UserName</option>

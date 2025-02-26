@@ -28,31 +28,31 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                    <form asp-controller="UsersController" asp-action="UserRegister" method="post" class="row g-3 needs-validation" novalidate>
-                    <input hidden asp-for="UserID"/>
+                  <form asp-controller="UsersController" asp-action="UserRegister" method="post" class="row g-3 needs-validation" novalidate>
+                  <input hidden asp-for="UserID"/>
                     
                     <div class="col-12">
                         <label for="yourUsername" asp-for="UserName" class="form-label">Username</label>
                         <input type="text" asp-for="UserName" name="username" class="form-control" id="yourUsername" required>
-                        <span asp-validation-for="UserName"></span>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
                     </div>
 
                     <div class="col-12">
                       <label for="yourEmail" asp-for="Email" class="form-label">Your Email</label>
                       <input type="email" asp-for="Email" name="email" class="form-control" id="yourEmail" required>
-                      <span class="invalid-feedback" asp-validation-for="Email">Please enter a valid Email adddress!</span>
+                      <span class="text-danger" asp-validation-for="Email"></span>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" asp-for="Password" class="form-label">Password</label>
                       <input type="password" asp-for="Password" name="password" class="form-control" id="yourPassword" required>
-                      <span asp-validation-for="Password"></span>
+                      <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
 
                     <div class="col-12">
                         <label for="yourName" asp-for="Mobile" class="form-label">Mobile No.</label>
                         <input type="text" asp-for="Mobile" name="name" class="form-control" id="yourName" required>
-                        <span asp-validation-for="Mobile"></span>
+                        <span asp-validation-for="Mobile" class="text-danger"></span>
                     </div>
 
                     <div class="col-12">
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="col-12">
-                                        <button asp-controller="Users" asp-action="UserRegister" class="btn btn-primary w-100" type="submit">Create Account</button>
+                        <button asp-controller="Users" asp-action="UserRegister" class="btn btn-primary w-100" type="submit">Create Account</button>
                     </div>
 
                     <div class="col-12">

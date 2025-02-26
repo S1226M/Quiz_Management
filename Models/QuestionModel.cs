@@ -15,18 +15,21 @@ namespace QuizeManagement.Models
         [Required(ErrorMessage = "Option D is Required")]
         public string OptionD { get; set; }
         
-        [Required(ErrorMessage = "Option Level Required")]
         public string? QuestionLevel { get; set; }
 
-        [Required(ErrorMessage = "Option Mark is Required")]
-        [Range(0,100 , ErrorMessage ="Question Mark is must be greater then 0.")]
+        [Required(ErrorMessage = "Total Question mark is Required")]
+        [Range(1, 100, ErrorMessage = "Total Questions must greater then 0.")]
         public int QuestionMarks {  get; set; }
         
-        [Required(ErrorMessage = "Correct Option is Required")]
+        [Required(ErrorMessage = "Correct Option is Required")] 
         public string CorrectOption { get; set; }
         public int QuestionID { get; set; }
         public string? UserName { get; set; }
+
+        [Required(ErrorMessage = "User name is required")]
         public int UserID { get; set; }
+
+        [Required(ErrorMessage = "Question Level is required")]
         public int QuestionLevelID { get; set; }
     }
 }
