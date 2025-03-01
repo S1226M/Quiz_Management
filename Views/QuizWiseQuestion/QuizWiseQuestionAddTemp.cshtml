@@ -24,7 +24,7 @@
                         <label class="form-label">Quiz</label> 
                         <select asp-for="QuizID" class="form-select"> 
                             <option value="">-- Select Quiz --</option> 
-                            @foreach (var level in ViewBag.Quiz) 
+                            @foreach (var level in ViewBag.Quiz)
                             { 
                                 <option value="@level.QuizID">@level.QuizName</option> 
                             }

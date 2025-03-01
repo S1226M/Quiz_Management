@@ -1,4 +1,4 @@
-﻿@model QuizeManagement.Models.UserLoginModel
+﻿@model QuizeManagement.Models.UserModel
 @{
     Layout = "~/Views/Shared/_LayoutRegisterLoginLogout.cshtml";
 }
@@ -28,61 +28,42 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                  <form asp-controller="UsersController" asp-action="UserRegister" method="post" class="row g-3 needs-validation" novalidate>
-                  <input hidden asp-for="UserID"/>
-                    
+                  <form asp-controller="Users" asp-action="Register" method="post" class="row g-3 needs-validation" novalidate>
+                    <input hidden asp-for="UserID"/>
                     <div class="col-12">
                         <label for="yourUsername" asp-for="UserName" class="form-label">Username</label>
-                        <input type="text" asp-for="UserName" name="username" class="form-control" id="yourUsername" required>
+                        <input type="text" asp-for="UserName" class="form-control" id="yourUsername" required>
                         <span asp-validation-for="UserName" class="text-danger"></span>
                     </div>
 
                     <div class="col-12">
                       <label for="yourEmail" asp-for="Email" class="form-label">Your Email</label>
-                      <input type="email" asp-for="Email" name="email" class="form-control" id="yourEmail" required>
+                      <input type="email" asp-for="Email" class="form-control" id="yourEmail" required>
                       <span class="text-danger" asp-validation-for="Email"></span>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" asp-for="Password" class="form-label">Password</label>
-                      <input type="password" asp-for="Password" name="password" class="form-control" id="yourPassword" required>
+                      <input type="password" asp-for="Password" class="form-control" id="yourPassword" required>
                       <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
 
                     <div class="col-12">
                         <label for="yourName" asp-for="Mobile" class="form-label">Mobile No.</label>
-                        <input type="text" asp-for="Mobile" name="name" class="form-control" id="yourName" required>
+                        <input type="text" asp-for="Mobile" class="form-control" id="yourName" required>
                         <span asp-validation-for="Mobile" class="text-danger"></span>
                     </div>
 
                     <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
-                        <div class="invalid-feedback">You must agree before submitting.</div>
-                      </div>
+                        <button class="btn btn-primary w-100" type="submit">Create Account</button>
                     </div>
 
                     <div class="col-12">
-                        <button asp-controller="Users" asp-action="UserRegister" class="btn btn-primary w-100" type="submit">Create Account</button>
-                    </div>
-
-                    <div class="col-12">
-                        <p class="small mb-0">Already have an account? <a asp-controller="RegisterLoginLogout" asp-action="Login">Log in</a></p>
+                        <p class="small mb-0">Already have an account? <a asp-controller="Users" asp-action="Login">Log in</a></p>
                     </div>
                   </form>
-
                 </div>
               </div>
-
-              <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-              </div>
-
             </div>
           </div>
         </div>

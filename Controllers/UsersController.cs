@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using QuizeManagement.Models;
 
@@ -30,23 +31,65 @@ namespace QuizeManagement.Controllers
         }
         #endregion User List
 
-        #region UserAdd
-        public IActionResult UserRegister(UserModel model)
+        public IActionResult Register(UserModel model)
         {
-            string connectionString = configuration.GetConnectionString("ConnectionString");
-            SqlConnection sqlConnection = new SqlConnection(connectionString);
-            sqlConnection.Open();
-            SqlCommand command = sqlConnection.CreateCommand();
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "PR_MST_User_Insert";
-            command.Parameters.Add("@UserName", SqlDbType.VarChar).Value = model.UserName;
-            command.Parameters.Add("@Email", SqlDbType.VarChar).Value = model.Email;
-            command.Parameters.Add("@Password", SqlDbType.VarChar).Value = model.Password;
-            command.Parameters.Add("@Mobile", SqlDbType.VarChar).Value = model.Mobile;
-            command.ExecuteNonQuery();
-            return RedirectToAction("DashboardView");
-        }
-        #endregion UserAdd
+            if (ModelState.IsValid)
+            {
+                string connectionString = configuration.GetConnectionString("ConnectionString");
+                SqlConnection sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                SqlCommand command = sqlConnection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "PR_MST_User_Insert";
+                command.Parameters.Add("@UserName", SqlDbType.VarChar).Value = model.UserName;
+                command.Parameters.Add("@Email", SqlDbType.VarChar).Value = model.Email;
+                command.Parameters.Add("@Password", SqlDbType.VarChar).Value = model.Password;
+                command.Parameters.Add("@Mobile", SqlDbType.VarChar).Value = model.Mobile;
+                command.ExecuteNonQuery();
 
+                return RedirectToAction("DashboardView", "Dashboard");
+            }
+            return View("Register");
+        }
+
+        public IActionResult Login(UserModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    string connectionString = configuration.GetConnectionString("ConnectionString");
+                    SqlConnection sqlConnection = new SqlConnection(connectionString);
+                    sqlConnection.Open();
+                    SqlCommand command = sqlConnection.CreateCommand();
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = "PR_MST_User_Login";
+                    command.Parameters.Add("@UserName", SqlDbType.VarChar).Value = model.UserName;
+                    command.Parameters.Add("@Password", SqlDbType.VarChar).Value = model.Password;
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+                    DataTable dataTable = new DataTable();
+                    dataTable.Load(sqlDataReader);
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dataTable.Rows)
+                        {
+                            HttpContext.Session.SetString("UserID", dr["UserID"].ToString());
+                            HttpContext.Session.SetString("UserName", dr["UserName"].ToString());
+                        }
+                        return RedirectToAction("DashboardView", "Dashboard");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Login", "Users");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return View("Login");
+        }
     }
 }
