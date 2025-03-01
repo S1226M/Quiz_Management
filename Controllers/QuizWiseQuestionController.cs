@@ -53,14 +53,14 @@ namespace QuizeManagement.Controllers
                 sqlConnection.Open();
                 SqlCommand command = sqlConnection.CreateCommand();
                 command.CommandType = CommandType.StoredProcedure;
-                if (model.QuizWiseQuestionID == 0)
+                if (model.QuizWiseQuestionsID == 0)
                 {
                     command.CommandText = "PR_MST_QuizWiseQuestions_Insert";
                 }
                 else
                 {
                     command.CommandText = "PR_MST_QuizWiseQuestions_Update";
-                    command.Parameters.Add("@QuizWiseQuestionID", SqlDbType.Int).Value = model.QuizWiseQuestionID;
+                    command.Parameters.Add("@QuizWiseQuestionsID", SqlDbType.Int).Value = model.QuizWiseQuestionsID;
                 }
                 command.Parameters.Add("@QuizID", SqlDbType.Int).Value = model.QuizID;
                 command.Parameters.Add("@QuestionID", SqlDbType.Int).Value = model.QuestionID;
@@ -76,8 +76,7 @@ namespace QuizeManagement.Controllers
         #endregion Temporary Quiz Wise Question Add
 
         #region Quiz Wise Question Edit
-
-        public IActionResult QuizWiseQuestionEdit(int QuizWiseQuestionID)
+        public IActionResult QuizWiseQuestionEdit(int QuizWiseQuestionsID)
         {
             QuizWiseQuestionUserDropDown();
             QuizWiseQuestionQuizDropDown();
@@ -87,8 +86,8 @@ namespace QuizeManagement.Controllers
             Connection.Open();
             SqlCommand command = Connection.CreateCommand();
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "PR_MST_QuizWiseQuestion_SelectByID";
-            command.Parameters.AddWithValue("@QuizWiseQuestionID", QuizWiseQuestionID);
+            command.CommandText = "PR_MST_QuizWiseQuestions_SelectByID";
+            command.Parameters.AddWithValue("@QuizWiseQuestionsID", QuizWiseQuestionsID);
             SqlDataReader reader = command.ExecuteReader();
             DataTable datatable = new DataTable();
             datatable.Load(reader);
@@ -104,6 +103,21 @@ namespace QuizeManagement.Controllers
             return View("QuizWiseQuestionAddTemp", model);
         }
         #endregion Quiz Wise Question Edit
+
+        #region Quiz Wise Question Delete
+        public IActionResult QuizWiseQuestionDelete(int QuizWiseQuestionsID)
+        {
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand Command = connection.CreateCommand();
+            Command.CommandType = CommandType.StoredProcedure;
+            Command.CommandText = "PR_MST_QuizWiseQuestions_Delete";
+            Command.Parameters.Add("@QuizWiseQuestionsID", SqlDbType.Int).Value = QuizWiseQuestionsID;
+            Command.ExecuteNonQuery();
+            return RedirectToAction("QuizWiseQuestionList");
+        }
+        #endregion Quiz Wise Question Delete
 
         #region Quiz Wise Question User DropDown
         public void QuizWiseQuestionUserDropDown()

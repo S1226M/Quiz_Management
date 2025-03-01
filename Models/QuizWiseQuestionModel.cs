@@ -4,7 +4,7 @@ namespace QuizeManagement.Models
 {
     public class QuizWiseQuestionModel
     {
-        public int QuizWiseQuestionID { get; set; }
+        public int QuizWiseQuestionsID { get; set; }
 
         [Required(ErrorMessage ="Quiz Name is Required")]
         public int QuizID { get; set; }
@@ -14,8 +14,8 @@ namespace QuizeManagement.Models
 
         [Required(ErrorMessage = "User Name is Required")]
         public int UserID { get; set; }
-        public string QuizName { get; set; }
-        public string UserName { get; set; }
+        public string? QuizName { get; set; }
+        public string? UserName { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
 

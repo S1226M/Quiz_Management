@@ -48,45 +48,30 @@
                             </tr>
                         </thead>
                         <tbody>
-                                @foreach(DataRow row in Model.Rows)
-                                {
-                                    <tr> 
-                                        <td>@row["QuizName"]</td> 
-                                        <td>@row["UserName"]</td> 
-                                        <td>@row["Created"]</td> 
-                                        <td>@row["Modified"]</td>
-                                        <td>
-                                            <a class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-eye-fill"></i></a>
-                                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                            <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                }
-                            
-                            @* <tr> *@
-                            @*     <td>1</td> *@
-                            @*     <td>101</td> *@
-                            @*     <td>201</td> *@
-                            @*     <td>2024-01-25</td> *@
-                            @*     <td>2024-01-28</td> *@
-                            @*     <td> *@
-                            @*         <a class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-eye-fill"></i></a> *@
-                            @*         <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a> *@
-                            @*         <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a> *@
-                            @*     </td> *@
-                            @* </tr> *@
-                            @* <tr> *@
-                            @*     <td>2</td> *@
-                            @*     <td>101</td> *@
-                            @*     <td>202</td> *@
-                            @*     <td>2024-01-25</td> *@
-                            @*     <td>2024-01-27</td> *@
-                            @*     <td> *@
-                            @*         <a class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-eye-fill"></i></a> *@
-                            @*         <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a> *@
-                            @*         <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a> *@
-                            @*     </td> *@
-                            @* </tr> *@
+                            @foreach(DataRow row in Model.Rows)
+                            {
+                                <tr> 
+                                    <td>@row["QuizName"]</td> 
+                                    <td>@row["UserName"]</td> 
+                                    <td>@row["Created"]</td> 
+                                    <td>@row["Modified"]</td>
+                                    <td>
+                                        <a class="btn btn-primary btn-sm" title="Upload new profile image">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a asp-controller="QuizWiseQuestion" asp-action="QuizWiseQuestionEdit" asp-route-QuizWiseQuestionsID="@row["QuizWiseQuestionsID"]" class="btn btn-primary btn-sm" title="Upload new profile image">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+
+                                        <form method="post" asp-controller="QuizWiseQuestion" asp-action="QuizWiseQuestionDelete" onsubmit="return confirmDelete()" style="display:inline;">
+                                            <input type="hidden" name="QuizWiseQuestionID" value="@row["QuizWiseQuestionsID"]" />
+                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
