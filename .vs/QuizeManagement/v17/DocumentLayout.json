@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\Quiz_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\controllers\\quizwisequestioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:controllers\\quizwisequestioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\views\\quiz\\quizaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:views\\quiz\\quizaddedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QuizWiseQuestionController.cs",
-              "DocumentMoniker": "D:\\Quiz_Management\\Controllers\\QuizWiseQuestionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\QuizWiseQuestionController.cs",
-              "ToolTip": "D:\\Quiz_Management\\Controllers\\QuizWiseQuestionController.cs",
-              "RelativeToolTip": "Controllers\\QuizWiseQuestionController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAGwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T13:40:26.506Z",
+              "Title": "QuizAddEdit.cshtml",
+              "DocumentMoniker": "D:\\Quiz_Management\\Views\\Quiz\\QuizAddEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Quiz\\QuizAddEdit.cshtml",
+              "ToolTip": "D:\\Quiz_Management\\Views\\Quiz\\QuizAddEdit.cshtml",
+              "RelativeToolTip": "Views\\Quiz\\QuizAddEdit.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAgwCkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-02T16:47:04.897Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Quiz_Management\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Quiz_Management\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T17:26:50.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Quiz_Management\\Views\\Users\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Login.cshtml",
+              "ToolTip": "D:\\Quiz_Management\\Views\\Users\\Login.cshtml",
+              "RelativeToolTip": "Views\\Users\\Login.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwCMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T17:23:31.676Z"
             }
           ]
         }

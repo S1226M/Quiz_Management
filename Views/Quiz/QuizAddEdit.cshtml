@@ -28,25 +28,6 @@
                         <span asp-validation-for="TotalQuestions" class="text-danger"></span>
                     </div>
 
-                    @* <div class="mb-3"> *@
-                    @*     <span class="text-danger">*</span> *@
-                    @*     <label class="form-label">User ID</label> *@
-                    @*     <select asp-for="UserID" class="form-select"> *@
-                    @*         <option value="">-- Select Level --</option> *@
-                    @*         @foreach (var level in ViewBag.UserID) *@
-                    @*         { *@
-                    @*             <option value="@level.UserID">@level.QuizName</option> *@
-                    @*         } *@
-                    @*     </select> *@
-                    @*     <span asp-validation-for="UserID" class="text text-danger"></span> *@
-                    @* </div> *@
-                    
-                    @* <div class="col-12"> *@
-                    @*      <label for="inputQuestions4" asp-for="UserID" class="form-label"><span class="text-danger">*</span>User ID</label> *@
-                    @*      <input type="number" asp-for="UserID" class="form-control" id="inputQuestions4"> *@
-                    @*      <span asp-validation-for="UserID" class="text-danger"></span> *@
-                    @*  </div> *@
-
                     <div class="mb-3">
                         <span class="text-danger">*</span>
                         <label class="form-label">User Name</label>
@@ -60,34 +41,11 @@
                         <span asp-validation-for="UserID" class="text text-danger"></span>
                     </div>
 
-
-                    @* <div class="col-12"> *@
-                    @*     <label for="UserName" class="form-label"><span class="text-danger">*</span>UserName</label> *@
-                    @*     <div class="row"> *@
-                    @*         <div class="col-12"> *@
-                    @*             <select class="form-select" aria-label="Default select example"> *@
-                    @*                 <option selected>-- Select User</option> *@
-                    @*                 <option>Two</option> *@
-                    @*                 <option>One</option> *@
-                    @*                 <option>Three</option> *@
-                    @*             </select> *@
-                    @*         </div> *@
-                    @*     </div> *@
-                    @* </div> *@
                     <div class="col-12">
                         <label for="inputdate" asp-for="QuizDate" class="form-label"><span class="text-danger">*</span>QuizDate</label>
                         <input type="date" asp-for="QuizDate" class="form-control" id="inputdate" min="@DateTime.Today.ToString("yyyy-MM-dd")">
                         <span asp-validation-for="QuizDate" class="text-danger"></span>
                     </div>
-                    @* <div class="col-12"> *@
-                    @*     <label for="quizUser" class="form-label">User</label> *@
-                    @*     <select id="quizUser" class="form-select"> *@
-                    @*         <option selected>Option A</option> *@
-                    @*         <option>Option B</option> *@
-                    @*         <option>Option C</option> *@
-                    @*         <option>Option D</option> *@
-                    @*     </select> *@
-                    @* </div> *@
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Save</button>
                         <a class="btn btn-secondary" asp-controller="Quiz" asp-action="QuizList">Cancel</a>

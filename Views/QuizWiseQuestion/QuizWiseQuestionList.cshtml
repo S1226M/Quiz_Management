@@ -42,8 +42,9 @@
                                 <th>Quiz Name</th>
                                 @* <th>Question ID</th> *@
                                 <th>User Name</th>
-                                <th>Created</th>
-                                <th>Modified</th>
+                                <th>Question Text</th>
+                                @* <th>Created</th> *@
+                                @* <th>Modified</th> *@
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -53,8 +54,10 @@
                                 <tr> 
                                     <td>@row["QuizName"]</td> 
                                     <td>@row["UserName"]</td> 
-                                    <td>@row["Created"]</td> 
-                                    <td>@row["Modified"]</td>
+                                    <td>@row["QuestionText"]</td>
+                                    @* <td>@row["Created"]</td>  *@
+                                    @* <td>@row["Modified"]</td> *@
+
                                     <td>
                                         <a class="btn btn-primary btn-sm" title="Upload new profile image">
                                             <i class="bi bi-eye-fill"></i>
@@ -64,7 +67,7 @@
                                         </a>
 
                                         <form method="post" asp-controller="QuizWiseQuestion" asp-action="QuizWiseQuestionDelete" onsubmit="return confirmDelete()" style="display:inline;">
-                                            <input type="hidden" name="QuizWiseQuestionID" value="@row["QuizWiseQuestionsID"]" />
+                                            <input type="hidden" name="QuizWiseQuestionsID" value="@row["QuizWiseQuestionsID"]" />
                                             <button type="submit" class="btn btn-danger btn-sm" title="Delete">
                                                 <i class="bi bi-trash"></i>
                                             </button>

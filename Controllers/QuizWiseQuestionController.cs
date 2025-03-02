@@ -110,6 +110,7 @@ namespace QuizeManagement.Controllers
             string connectionString = configuration.GetConnectionString("ConnectionString");
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
+            Console.Write(QuizWiseQuestionsID);
             SqlCommand Command = connection.CreateCommand();
             Command.CommandType = CommandType.StoredProcedure;
             Command.CommandText = "PR_MST_QuizWiseQuestions_Delete";

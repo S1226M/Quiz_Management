@@ -31,6 +31,7 @@ namespace QuizeManagement.Controllers
         }
         #endregion User List
 
+        #region User Register
         public IActionResult Register(UserModel model)
         {
             if (ModelState.IsValid)
@@ -52,6 +53,9 @@ namespace QuizeManagement.Controllers
             return View("Register");
         }
 
+        #endregion User Register
+
+        #region User Login
         public IActionResult Login(UserModel model)
         {
             try
@@ -91,5 +95,7 @@ namespace QuizeManagement.Controllers
 
             return View("Login");
         }
+
+        #endregion User Login
     }
 }
