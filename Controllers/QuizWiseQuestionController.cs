@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿
+using System.Data.SqlClient;
 using System.Data;
 using Microsoft.AspNetCore.Mvc;
 using QuizeManagement.Models;
@@ -31,6 +32,22 @@ namespace QuizeManagement.Controllers
             return View(table);
         }
         #endregion Quiz List
+
+        //#region Question List
+        //public IActionResult QuizWiseQuestionQuestionList()
+        //{
+        //    string connectionString = configuration.GetConnectionString("ConnectionString");
+        //    SqlConnection connection = new SqlConnection(connectionString);
+        //    connection.Open();
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandType = CommandType.StoredProcedure;
+        //    command.CommandText = "";
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    DataTable table = new DataTable();
+        //    table.Load(reader);
+        //    return View(table);
+        //}
+        //#endregion Question List
 
 
         #region Quiz Wise Question Add

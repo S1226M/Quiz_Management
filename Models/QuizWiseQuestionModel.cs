@@ -15,7 +15,7 @@ namespace QuizeManagement.Models
         [Required(ErrorMessage = "User Name is Required")]
         public int UserID { get; set; }
 
-        public string QuestionText { get; set; }
+        public string? QuestionText { get; set; }
         public string? QuizName { get; set; }
         public string? UserName { get; set; }
         public DateTime Created { get; set; }

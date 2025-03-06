@@ -16,16 +16,21 @@ namespace QuizeManagement.Controllers
             configuration = _configuration;
         }
 
+        public IConfiguration GetConfiguration()
+        {
+            return configuration;
+        }
+
         #region Question Add
 
-        public IActionResult QuestionSave(QuestionModel model)
+        public IActionResult QuestionSave(QuestionModel model, IConfiguration configuration)
         {
             if (ModelState.IsValid)
             {
                 QuestionLevelDropDown();
                 QuestionUserDropDown();
                 string connectionString = configuration.GetConnectionString("ConnectionString");
-                SqlConnection sqlConnection = new SqlConnection(connectionString);
+                SqlConnection sqlConnection = new(connectionString);
                 sqlConnection.Open();
                 SqlCommand command = sqlConnection.CreateCommand();
                 command.CommandType = CommandType.StoredProcedure;
