@@ -55,6 +55,31 @@ namespace QuizeManagement.Controllers
 
         #endregion User Register
 
+        #region User Edit
+        public IActionResult QuizAddEdit(int UserID)
+        {
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+            SqlConnection Connection = new SqlConnection(connectionString);
+            Connection.Open();
+            SqlCommand command = Connection.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "PR_MST_User_SelectByID";
+            command.Parameters.AddWithValue("@UserID", UserID);
+            SqlDataReader reader = command.ExecuteReader();
+            DataTable datatable = new DataTable();
+            datatable.Load(reader);
+            QuizModel model = new QuizModel();
+            foreach (DataRow row in datatable.Rows)
+            {
+                model.QuizName = @row["QuizName"].ToString();
+                model.TotalQuestions = Convert.ToInt32(@row["TotalQuestions"]);
+                model.QuizDate = Convert.ToDateTime(@row["QuizDate"]);
+                model.UserID = Convert.ToInt32(@row["UserID"]);
+            }
+            return View("QuizAddEdit", model);
+        }
+        #endregion Quiz Edit
+
         #region User Delete
         public IActionResult UserDelete(int UserID)
         {
@@ -111,5 +136,7 @@ namespace QuizeManagement.Controllers
         //    return View("Login");
         //}
         //#endregion User Login
+
+
     }
 }
