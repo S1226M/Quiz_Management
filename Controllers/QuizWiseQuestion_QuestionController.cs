@@ -31,11 +31,13 @@ namespace QuizeManagement.Controllers
         #endregion Question List
 
         #region Question Add
-        //public IActionResult QuestionAddInQuiz(int QuizID)
-        //{
-        //    ViewBag.QuizID = QuizID;
-        //    return View();
-        //}
+        public IActionResult QuestionAddInQuiz(int QuizID)
+        {
+            
+            ViewBag.QuizID = QuizID;
+            return RedirectToAction("QuizWiseQuestionEdit", "QuizWiseQuestion", new { QuizWiseQuestionsID = QuizID });
+        }
+
         #endregion Question Add
     }
 }
