@@ -53,16 +53,16 @@ namespace QuizeManagement.Controllers
                 sqlConnection.Open();
                 SqlCommand command = sqlConnection.CreateCommand();
                 command.CommandType = CommandType.StoredProcedure;
-                if(model.QuizWiseQuestionsID > 0 && (model.QuestionID == 0 && model.QuizID == 0 && model.UserID == 0))
-                {
-                    command.CommandText = "PR_PR_MST_QuizWiseQuestions_Update_Specific_Quiz";
-                    command.Parameters.Add("@QuizWiseQuestionsID", SqlDbType.Int).Value = model.QuizWiseQuestionsID;
-                    command.Parameters.Add("@QuizID", SqlDbType.Int).Value = null;
-                    command.Parameters.Add("@QuestionID", SqlDbType.Int).Value = null;
-                    command.Parameters.Add("@UserID", SqlDbType.Int).Value = null;
-                    command.ExecuteNonQuery();
-                    return RedirectToAction("QuizWiseQuestionList");
-                }
+                //if(model.QuizWiseQuestionsID > 0 && (model.QuestionID == 0 && model.QuizID == 0 && model.UserID == 0))
+                //{
+                //    command.CommandText = "PR_PR_MST_QuizWiseQuestions_Update_Specific_Quiz";
+                //    command.Parameters.Add("@QuizWiseQuestionsID", SqlDbType.Int).Value = model.QuizWiseQuestionsID;
+                //    command.Parameters.Add("@QuizID", SqlDbType.Int).Value = null;
+                //    command.Parameters.Add("@QuestionID", SqlDbType.Int).Value = null;
+                //    command.Parameters.Add("@UserID", SqlDbType.Int).Value = null;
+                //    command.ExecuteNonQuery();
+                //    return RedirectToAction("QuizWiseQuestionList");
+                //}
                 if (model.QuizWiseQuestionsID == 0)
                 {
                     command.CommandText = "PR_MST_QuizWiseQuestions_Insert";
@@ -101,26 +101,17 @@ namespace QuizeManagement.Controllers
             SqlDataReader reader = command.ExecuteReader();
             DataTable datatable = new DataTable();
             datatable.Load(reader);
-            if(QuizWiseQuestionsID == 0)
+
+            QuizWiseQuestionModel model = new QuizWiseQuestionModel();
+            foreach (DataRow row in datatable.Rows)
             {
-                QuizWiseQuestionModel model = new QuizWiseQuestionModel();
-                foreach (DataRow row in datatable.Rows)
-                {
-                    model.QuestionID = Convert.ToInt32(@row["QuestionID"]);
-                    model.QuizID = Convert.ToInt32(@row["QuizID"]);
-                    model.UserID = Convert.ToInt32(@row["UserID"]);
-                    model.Created = Convert.ToDateTime(@row["Created"]);
-                    model.Modified = Convert.ToDateTime(@row["Modified"]);
-                }
-                return View("QuizWiseQuestionAddTemp", model);
+                model.QuestionID = Convert.ToInt32(@row["QuestionID"]);
+                model.QuizID = Convert.ToInt32(@row["QuizID"]);
+                model.UserID = Convert.ToInt32(@row["UserID"]);
+                model.Created = Convert.ToDateTime(@row["Created"]);
+                model.Modified = Convert.ToDateTime(@row["Modified"]);
             }
-            else
-            {
-                QuizWiseQuestionModel model = new QuizWiseQuestionModel();
-                QuizWiseQuestionsID = Convert.ToInt32(QuizWiseQuestionsID);
-                model.QuizWiseQuestionsID = QuizWiseQuestionsID;
-                return View("QuizWiseQuestionAddTemp", model);
-            }
+            return View("QuizWiseQuestionAddTemp", model);
         }
         #endregion Quiz Wise Question Edit
 

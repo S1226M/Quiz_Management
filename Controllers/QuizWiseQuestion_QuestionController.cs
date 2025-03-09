@@ -33,7 +33,6 @@ namespace QuizeManagement.Controllers
         #region Question Add
         public IActionResult QuestionAddInQuiz(int QuizID)
         {
-            
             ViewBag.QuizID = QuizID;
             return RedirectToAction("QuizWiseQuestionEdit", "QuizWiseQuestion", new { QuizWiseQuestionsID = QuizID });
         }
