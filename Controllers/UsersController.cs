@@ -95,48 +95,58 @@ namespace QuizeManagement.Controllers
         }
         #endregion User Delete
 
-        //#region User Login
-        //public IActionResult Login(UserModel model)
-        //{
-        //    try
-        //    {
-        //        if (ModelState.IsValid)
-        //        {
-        //            string connectionString = configuration.GetConnectionString("ConnectionString");
-        //            SqlConnection sqlConnection = new SqlConnection(connectionString);
-        //            sqlConnection.Open();
-        //            SqlCommand command = sqlConnection.CreateCommand();
-        //            command.CommandType = CommandType.StoredProcedure;
-        //            command.CommandText = "PR_MST_User_Login";
-        //            command.Parameters.Add("@UserName", SqlDbType.VarChar).Value = model.UserName;
-        //            command.Parameters.Add("@Password", SqlDbType.VarChar).Value = model.Password;
-        //            SqlDataReader sqlDataReader = command.ExecuteReader();
-        //            DataTable dataTable = new DataTable();
-        //            dataTable.Load(sqlDataReader);
-        //            if (dataTable.Rows.Count > 0)
-        //            {
-        //                foreach (DataRow dr in dataTable.Rows)
-        //                {
-        //                    HttpContext.Session.SetString("UserID", dr["UserID"].ToString());
-        //                    HttpContext.Session.SetString("UserName", dr["UserName"].ToString());
-        //                }
-        //                return RedirectToAction("DashboardView", "Dashboard");
-        //            }
-        //            else
-        //            {
-        //                return RedirectToAction("Login", "Users");
-        //            }
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw e;
-        //    }
+        public IActionResult Login()
+        {
+            return View();
+        }
 
-        //    return View("Login");
-        //}
-        //#endregion User Login
+        #region UserLogin
+        public IActionResult UserLogin(UserLoginModel userLoginModel)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    string connectionString = this.configuration.GetConnectionString("ConnectionString");
+                    SqlConnection sqlConnection = new SqlConnection(connectionString);
+                    sqlConnection.Open();
+                    SqlCommand sqlCommand = sqlConnection.CreateCommand();
+                    sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    sqlCommand.CommandText = "PR_MST_User_Login";
+                    sqlCommand.Parameters.Add("@UserName", SqlDbType.VarChar).Value = userLoginModel.UserName;
+                    sqlCommand.Parameters.Add("@Password", SqlDbType.VarChar).Value = userLoginModel.Password;
+                    SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                    DataTable dataTable = new DataTable();
+                    dataTable.Load(sqlDataReader);
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        if (dataTable.Columns.Contains("ErrorMessage"))  // If an error message is returned
+                        {
+                            TempData["ErrorMessage"] = dataTable.Rows[0]["ErrorMessage"].ToString();
+                            return RedirectToAction("Login", "Users");
+                        }
 
+                        // Successful login - store session
+                        HttpContext.Session.SetString("UserID", dataTable.Rows[0]["UserID"].ToString());
+                        HttpContext.Session.SetString("UserName", dataTable.Rows[0]["UserName"].ToString());
 
+                        return RedirectToAction("DashboardView", "Dashboard");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                TempData["ErrorMessage"] = e.Message;
+            }
+
+            return RedirectToAction("Login");
+        }
+        #endregion UserLogin
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "User");
+        }
     }
 }

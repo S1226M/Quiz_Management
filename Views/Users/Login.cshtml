@@ -2,6 +2,14 @@
 @{
     Layout = "~/Views/Shared/_LayoutRegisterLoginLogout.cshtml";
 }
+@if (TempData["ErrorMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            alert("@TempData["ErrorMessage"]");
+        };
+    </script>
+}
 
   <main>
     <div class="container">
@@ -27,8 +35,7 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" asp-controller="Users" asp-action="Login" novalidate>
-
+                    <form class="row g-3 needs-validation" asp-controller="Users" asp-action="UserLogin" novalidate>
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
                       <input type="text" asp-for="UserName" name="username" class="form-control" id="yourUsername" required>
@@ -39,13 +46,6 @@
                       <label for="yourPassword" class="form-label">Password</label>
                       <input type="password" asp-for="Password" name="password" class="form-control" id="yourPassword" required>
                       <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Remember me</label>
-                      </div>
                     </div>
 
                     <div class="col-12">

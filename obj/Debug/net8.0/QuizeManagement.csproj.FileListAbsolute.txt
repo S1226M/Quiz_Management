@@ -151,3 +151,12 @@ C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\obj\Debug\net
 C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\obj\Debug\net8.0\QuizeManagement.pdb
 C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\obj\Debug\net8.0\QuizeManagement.genruntimeconfig.cache
 C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\obj\Debug\net8.0\ref\QuizeManagement.dll
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\Quiz-Management\config\applicationhost.config
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\QuizeManagement\config\applicationhost.config
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\Quiz_Management\config\applicationhost.config
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\Quiz-Management\v17\DocumentLayout.backup.json
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\Quiz-Management\v17\DocumentLayout.json
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\QuizeManagement\v17\DocumentLayout.backup.json
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\QuizeManagement\v17\DocumentLayout.json
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\Quiz_Management\v17\DocumentLayout.json
+C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\VSWorkspaceState.json
