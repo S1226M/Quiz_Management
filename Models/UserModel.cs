@@ -25,7 +25,6 @@ namespace QuizeManagement.Models
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
 
-
         public class UserDropdownModel
         {
             public int UserID { get; set; }

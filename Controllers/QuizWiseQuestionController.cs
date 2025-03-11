@@ -9,6 +9,7 @@ using static QuizeManagement.Models.UserModel;
 
 namespace QuizeManagement.Controllers
 {
+    [CheckAccess]
     public class QuizWiseQuestionController : Controller
     {
         public IConfiguration configuration;

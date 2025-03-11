@@ -8,6 +8,7 @@ using static QuizeManagement.Models.UserModel;
 
 namespace QuizeManagement.Controllers
 {
+    [CheckAccess]
     public class QuizController : Controller
     {
         public IConfiguration configuration;

@@ -6,6 +6,7 @@ using QuizeManagement.Models;
 
 namespace QuizeManagement.Controllers
 {
+    //[CheckAccess]
     public class UsersController : Controller
     {
         public IConfiguration configuration;
@@ -182,7 +183,6 @@ namespace QuizeManagement.Controllers
             {
                 TempData["ErrorMessage"] = e.Message;
             }
-
             return RedirectToAction("Login");
         }
         #endregion UserLogin

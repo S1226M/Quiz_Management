@@ -2,6 +2,7 @@
 
 namespace QuizeManagement.Controllers
 {
+    [CheckAccess]
     public class UserProfileController : Controller
     {
         public IActionResult UserProfile()

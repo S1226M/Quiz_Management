@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace QuizeManagement.Controllers
 {
+    [CheckAccess]
     public class QuizWiseQuestion_QuestionController : Controller
     {
         public IConfiguration configuration;

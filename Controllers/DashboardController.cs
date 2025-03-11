@@ -2,6 +2,7 @@
 
 namespace QuizeManagement.Controllers
 {
+    [CheckAccess]
     public class DashboardController : Controller
     {
         public IActionResult DashboardView()

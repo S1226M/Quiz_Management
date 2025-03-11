@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml;
 
 namespace QuizeManagement
 {
@@ -9,7 +10,7 @@ namespace QuizeManagement
         {
             if (filterContext.HttpContext.Session.GetString("UserID") == null)
             {
-                filterContext.Result = new RedirectResult("~/User/Login");
+                filterContext.Result = new RedirectResult("~/Users/Login");
             }
         }
 
