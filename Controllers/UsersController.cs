@@ -31,8 +31,16 @@ namespace QuizeManagement.Controllers
         }
         #endregion User List
 
-        #region User Register
-        public IActionResult Register(UserModel model)
+        #region Register View
+        public IActionResult Register()
+        {
+            return View();
+        }
+        #endregion Register View
+
+
+        #region Register User View----------
+        public IActionResult RegisterUser(UserModel model)
         {
             if (ModelState.IsValid)
             {
@@ -52,11 +60,45 @@ namespace QuizeManagement.Controllers
             }
             return View("Register");
         }
+        #endregion Register User View----------
 
-        #endregion User Register
+        //#region User Register
+        //public IActionResult Register(UserModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        string connectionString = configuration.GetConnectionString("ConnectionString");
+        //        SqlConnection sqlConnection = new SqlConnection(connectionString);
+        //        sqlConnection.Open();
+        //        SqlCommand command = sqlConnection.CreateCommand();
+        //        command.CommandType = CommandType.StoredProcedure;
+
+        //        if (model.UserID == 0)
+        //        {
+        //            command.CommandText = "PR_MST_User_Insert";
+        //        }
+        //        else
+        //        {
+        //            command.CommandText = "PR_MST_User_Update";
+        //            command.Parameters.Add("@UserID", SqlDbType.Int).Value = model.UserID;
+        //        }
+
+                
+        //        command.Parameters.Add("@UserName", SqlDbType.VarChar).Value = model.UserName;
+        //        command.Parameters.Add("@Email", SqlDbType.VarChar).Value = model.Email;
+        //        command.Parameters.Add("@Password", SqlDbType.VarChar).Value = model.Password;
+        //        command.Parameters.Add("@Mobile", SqlDbType.VarChar).Value = model.Mobile;
+        //        command.ExecuteNonQuery();
+
+        //        return RedirectToAction("DashboardView", "Dashboard");
+        //    }
+        //    return View("Register");
+        //}
+
+        //#endregion User Register
 
         #region User Edit
-        public IActionResult QuizAddEdit(int UserID)
+        public IActionResult UserAddEdit(int UserID)
         {
             string connectionString = configuration.GetConnectionString("ConnectionString");
             SqlConnection Connection = new SqlConnection(connectionString);
@@ -68,17 +110,17 @@ namespace QuizeManagement.Controllers
             SqlDataReader reader = command.ExecuteReader();
             DataTable datatable = new DataTable();
             datatable.Load(reader);
-            QuizModel model = new QuizModel();
+            UserModel model = new UserModel();
             foreach (DataRow row in datatable.Rows)
             {
-                model.QuizName = @row["QuizName"].ToString();
-                model.TotalQuestions = Convert.ToInt32(@row["TotalQuestions"]);
-                model.QuizDate = Convert.ToDateTime(@row["QuizDate"]);
-                model.UserID = Convert.ToInt32(@row["UserID"]);
+                model.UserName = @row["UserName"].ToString();
+                model.Email = @row["Email"].ToString();
+                model.Password = @row["Password"].ToString();
+                model.Mobile = @row["Mobile"].ToString();
             }
-            return View("QuizAddEdit", model);
+            return View("RegisterUser", model);
         }
-        #endregion Quiz Edit
+        #endregion User Edit
 
         #region User Delete
         public IActionResult UserDelete(int UserID)
@@ -95,10 +137,12 @@ namespace QuizeManagement.Controllers
         }
         #endregion User Delete
 
+        #region User Login Page
         public IActionResult Login()
         {
             return View();
         }
+        #endregion User Login Page
 
         #region UserLogin
         public IActionResult UserLogin(UserLoginModel userLoginModel)
@@ -143,10 +187,13 @@ namespace QuizeManagement.Controllers
         }
         #endregion UserLogin
 
+        #region User Logout
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Login", "User");
+            return RedirectToAction("Login", "Users");
         }
+        #endregion User Logout
+
     }
 }

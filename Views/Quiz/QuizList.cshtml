@@ -17,25 +17,21 @@
         <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">Search Quiz</h5>
-                <form class="row g-3 align-items-end">
+                <form class="row g-3 align-items-end" method="post" asp-controller="Quiz" asp-action="QuizFilter" asp-route-filter="true">
                     <div class="col-md-6">
-                        <label for="quizName" class="form-label">Quiz Name</label>
-                        <input type="text" class="form-control" id="quizName" placeholder="Enter quiz name">
+                        <label for="QuizName" class="form-label">Quiz Name</label>
+                        <input type="text" class="form-control" id="QuizName" name="QuizName" placeholder="Enter quiz name">
                     </div>
                     <div class="col-md-3">
-                        <label for="quizName" class="form-label">Min Question</label>
-                        <input type="number" class="form-control" id="minQue" placeholder="Enter min Question">
+                        <label for="TotalQuestions" class="form-label">Total Questions</label>
+                        <input type="number" class="form-control" id="TotalQuestions" name="TotalQuestions" placeholder="Enter min questions">
                     </div>
                     <div class="col-md-3">
-                        <label for="quizName" class="form-label">Max Question</label>
-                        <input type="number" class="form-control" id="maxQue" placeholder="Enter max Question">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="quizDate" class="form-label">Quiz Date</label>
-                        <input type="date" class="form-control" id="quizDate">
+                        <label for="QuizDate" class="form-label">Quiz Date</label>
+                        <input type="date" class="form-control" id="QuizDate" name="QuizDate">
                     </div>
                     <div class="d-flex justify-content-start">
-                        <button type="button" class="btn btn-primary mx-1">Search</button>
+                        <button type="submit" class="btn btn-primary mx-1">Search</button>
                         <button type="reset" class="btn btn-secondary mx-1">Reset</button>
                     </div>
                 </form>
@@ -49,7 +45,12 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <h5 class="card-title">Quiz List</h5>
-                            <a class="btn btn-success" id="addQuiz" asp-controller="Quiz" asp-action="QuizAddEdit">Add Quiz</a>
+                            <div>
+                                <a class="btn btn-success" id="addQuiz" asp-controller="Quiz" asp-action="QuizAddEdit">Add Quiz</a>
+                                <a class="btn btn-info" asp-controller="Quiz" asp-action="ExportToExcel">
+                                    <i class="bi bi-file-earmark-excel"></i> Download Excel File
+                                </a>
+                            </div>
                         </div>
                         <!-- Table with stripped rows -->
                         <table class="table table-striped">
@@ -74,7 +75,7 @@
                                             
                                             <form method="post" asp-controller="Quiz" asp-action="QuizDelete" onsubmit="return confirmDelete()" style="display:inline;">
                                                 <input type="hidden" name="QuizID" value="@row["QuizID"]" />
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete">
+                                                <button type="submit" onclick="return confirm('Are you sure you want to delete this user?');" class="btn btn-danger btn-sm" title="Delete">
                                                     <i class="bi bi-trash"></i>
                                                 </button>
                                             </form>

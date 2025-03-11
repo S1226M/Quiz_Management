@@ -202,5 +202,42 @@ namespace QuizeManagement.Controllers
             ViewBag.Question = list;
         }
         #endregion Quiz Wise Question Question DropDown
+
+        #region Quiz Wise Question Quiz Search
+        [HttpPost]
+        public IActionResult QuizWiseQuestionQuizFilter(string QuizName, int? UserName, bool filter = false)
+        {
+            DataTable dtable = new DataTable();
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+
+            using (SqlConnection SQLConn = new SqlConnection(connectionString))
+            {
+                SQLConn.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = SQLConn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    if (filter)
+                    {
+                        cmd.CommandText = "PR_MST_Quiz_Search_QuizWiseQuestion";
+                        cmd.Parameters.AddWithValue("@QuizName", (object)QuizName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@UserName", (object)UserName ?? DBNull.Value);
+                    }
+                    else
+                    {
+                        cmd.CommandText = "PR_MST_Quiz_SelectAll";
+                    }
+
+                    using (SqlDataReader objStr = cmd.ExecuteReader())
+                    {
+                        dtable.Load(objStr);
+                    }
+                }
+            }
+
+            return View("QuizWiseQuestionList", dtable);
+        }
+        #endregion Quiz Wise Question Quiz Search
     }
 }

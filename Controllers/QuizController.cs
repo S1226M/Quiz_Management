@@ -1,6 +1,8 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using OfficeOpenXml;
 using QuizeManagement.Models;
 using static QuizeManagement.Models.UserModel;
 
@@ -52,7 +54,7 @@ namespace QuizeManagement.Controllers
                 command.Parameters.Add("@QuizName", SqlDbType.VarChar).Value = model.QuizName;
                 command.Parameters.Add("@TotalQuestions", SqlDbType.Int).Value = model.TotalQuestions;
                 command.Parameters.Add("@QuizDate", SqlDbType.DateTime).Value = model.QuizDate;
-                command.Parameters.Add("@UserID", SqlDbType.Int).Value = model. UserID;
+                command.Parameters.Add("@UserID", SqlDbType.Int).Value = model.UserID;
                 command.ExecuteNonQuery();
                 return RedirectToAction("QuizList");
             }
@@ -96,7 +98,7 @@ namespace QuizeManagement.Controllers
             SqlCommand Command = connection.CreateCommand();
             Command.CommandType = CommandType.StoredProcedure;
             Command.CommandText = "PR_MST_Quiz_Delete";
-            Command.Parameters.Add("@QuizID",SqlDbType.Int).Value = QuizID;
+            Command.Parameters.Add("@QuizID", SqlDbType.Int).Value = QuizID;
             Command.ExecuteNonQuery();
             return RedirectToAction("QuizList");
         }
@@ -125,5 +127,112 @@ namespace QuizeManagement.Controllers
             ViewBag.User = list;
         }
         #endregion User Dropdown
+
+        #region Quiz Filter
+        [HttpPost]
+        public IActionResult QuizFilter(string QuizName, DateTime? QuizDate, int? TotalQuestions, bool filter = false)
+        {
+            DataTable dtable = new DataTable();
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+
+            using (SqlConnection SQLConn = new SqlConnection(connectionString))
+            {
+                SQLConn.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = SQLConn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    if (filter)
+                    {
+                        cmd.CommandText = "PR_MST_Quiz_Search";
+                        cmd.Parameters.AddWithValue("@QuizName", (object)QuizName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@QuizDate", QuizDate.HasValue ? (object)QuizDate.Value : DBNull.Value);
+                        cmd.Parameters.AddWithValue("@TotalQuestions", TotalQuestions.HasValue ? (object)TotalQuestions.Value : DBNull.Value);
+                    }
+                    else
+                    {
+                        cmd.CommandText = "PR_MST_Quiz_SelectAll";
+                    }
+
+                    using (SqlDataReader objStr = cmd.ExecuteReader())
+                    {
+                        dtable.Load(objStr);
+                    }
+                }
+            }
+
+            return View("QuizList", dtable);
+        }
+
+
+        #endregion Quiz Filter
+
+        #region Export to Excel
+        public IActionResult ExportToExcel()
+        {
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+
+                using (SqlCommand sqlCommand = new SqlCommand("PR_MST_Quiz_SelectAll", sqlConnection))
+                {
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())  // No Parameters
+                    {
+                        DataTable data = new DataTable();
+                        data.Load(sqlDataReader);
+
+                        using (var package = new ExcelPackage())
+                        {
+                            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+                            var worksheet = package.Workbook.Worksheets.Add("QuizData");
+
+                            worksheet.Cells[1, 1].Value = "QuizID";
+                            worksheet.Cells[1, 2].Value = "QuizName";
+                            worksheet.Cells[1, 3].Value = "TotalQuestions";
+                            worksheet.Cells[1, 4].Value = "QuizDate";
+                            worksheet.Cells[1, 5].Value = "UserName";
+                            worksheet.Cells[1, 6].Value = "Created";
+                            worksheet.Cells[1, 7].Value = "Modified";
+
+                            using (var range = worksheet.Cells[1, 1, 1, 7])
+                            {
+                                range.Style.Font.Bold = true;
+                                range.AutoFitColumns();
+                            }
+
+                            int row = 2;
+                            foreach (DataRow item in data.Rows)
+                            {
+                                worksheet.Cells[row, 1].Value = item["QuizID"];
+                                worksheet.Cells[row, 2].Value = item["QuizName"];
+                                worksheet.Cells[row, 3].Value = item["TotalQuestions"];
+                                worksheet.Cells[row, 4].Value = item["QuizDate"];
+                                worksheet.Cells[row, 5].Value = item["UserName"];
+                                worksheet.Cells[row, 6].Value = item["Created"];
+                                worksheet.Cells[row, 7].Value = item["Modified"];
+                                row++;
+                            }
+
+                            worksheet.Cells.AutoFitColumns();
+
+                            var stream = new MemoryStream();
+                            package.SaveAs(stream);
+                            stream.Position = 0;
+
+                            string excelName = $"QuizData-{DateTime.Now:yyyyMMddHHmmss}.xlsx";
+                            return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", excelName);
+                        }
+                    }
+                }
+            }
+        }
+
+        #endregion Export to Excel
     }
 }

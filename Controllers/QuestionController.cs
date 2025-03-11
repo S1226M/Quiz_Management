@@ -178,5 +178,44 @@ namespace QuizeManagement.Controllers
             return RedirectToAction("QuestionList");
         }
         #endregion Question Delete
+
+        #region Question Filter
+        [HttpPost]
+        public IActionResult QuestionFilter(string QuestionText, string QuestionLevel, int? QuestionMarks, bool filter = false)
+        {
+            DataTable dtable = new DataTable();
+            string connectionString = configuration.GetConnectionString("ConnectionString");
+
+            using (SqlConnection SQLConn = new SqlConnection(connectionString))
+            {
+                SQLConn.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = SQLConn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    if (filter)
+                    {
+                        cmd.CommandText = "PR_MST_Question_Search";
+                        cmd.Parameters.AddWithValue("@QuestionText", (object)QuestionText ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@QuestionLevel", (object)QuestionLevel ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@QuestionMarks", (object)QuestionMarks ?? DBNull.Value);
+                    }
+                    else
+                    {
+                        cmd.CommandText = "PR_MST_Question_SelectAll";
+                    }
+
+                    using (SqlDataReader objStr = cmd.ExecuteReader())
+                    {
+                        dtable.Load(objStr);
+                    }
+                }
+            }
+
+            return View("QuestionList", dtable);
+        }
+
+        #endregion Question Filter
     }
 }

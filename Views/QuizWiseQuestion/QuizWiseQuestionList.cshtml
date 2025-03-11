@@ -9,17 +9,19 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title mb-3">Search</h5>
-                        <form>
+                        <form asp-action="QuizWiseQuestionQuizFilter" asp-controller="QuizWiseQuestion" method="post" asp-route-filter="true">
                             <div class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Enter Quiz ID">
+                                <div class="col-md-3">
+                                    <label for="QuizName" class="form-label">Quiz Name</label>
+                                    <input type="text" class="form-control" id="QuizName" name="QuizName" placeholder="Enter Quiz Name">
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Enter Question ID">
+                                <div class="col-md-3">
+                                    <label for="UserName" class="form-label">User Name</label>
+                                    <input type="text" class="form-control" id="UserName" name="UserName" placeholder="Enter User Name">
                                 </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-success me-2">Search</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                <div class="d-flex justify-content-start">
+                                    <button type="submit" class="btn btn-primary mx-1">Search</button>
+                                    <button type="reset" class="btn btn-secondary mx-1">Reset</button>
                                 </div>
                             </div>
                         </form>

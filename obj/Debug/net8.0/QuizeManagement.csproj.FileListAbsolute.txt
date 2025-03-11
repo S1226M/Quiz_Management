@@ -160,3 +160,14 @@ C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net
 C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\QuizeManagement\v17\DocumentLayout.json
 C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\Quiz_Management\v17\DocumentLayout.json
 C:\Users\smitm\Downloads\Quiz_Management-main\Quiz_Management-main\bin\Debug\net8.0\ (2).vs\VSWorkspaceState.json
+D:\Quiz_Management\bin\Debug\net8.0\EPPlus.dll
+D:\Quiz_Management\bin\Debug\net8.0\EPPlus.Interfaces.dll
+D:\Quiz_Management\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+D:\Quiz_Management\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Quiz_Management\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Quiz_Management\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Quiz_Management\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Quiz_Management\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Quiz_Management\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\Quiz_Management\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Quiz_Management\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

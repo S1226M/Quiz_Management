@@ -363,19 +363,26 @@
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Icons Nav -->
+            </li><!-- End Icons Nav -->     
+
+            @* <li class="nav-item"> *@
+            @*     <a class="nav-link collapsed" asp-controller="Users" asp-action="Register"> *@
+            @*         <i class="bi bi-grid"></i> *@
+            @*         <span>Register</span> *@
+            @*     </a> *@
+            @* </li><!-- End Register Nav --> *@
+
+            @* <li class="nav-item"> *@
+            @*     <a class="nav-link collapsed" asp-controller="Users" asp-action="Login"> *@
+            @*         <i class="bi bi-grid"></i> *@
+            @*         <span>Login</span> *@
+            @*     </a> *@
+            @* </li><!-- End Login Nav --> *@
 
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="Users" asp-action="Register">
+                <a class="nav-link collapsed" asp-controller="Users" asp-action="Logout">
                     <i class="bi bi-grid"></i>
-                    <span>Register</span>
-                </a>
-            </li><!-- End Register Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="Users" asp-action="Login">
-                    <i class="bi bi-grid"></i>
-                    <span>Login</span>
+                    <span>LogOut</span>
                 </a>
             </li><!-- End Login Nav -->
         </ul>
@@ -424,6 +431,10 @@
 
    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
 
 </body>
 </html>
