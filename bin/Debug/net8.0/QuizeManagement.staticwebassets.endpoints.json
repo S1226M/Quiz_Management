@@ -249,6 +249,88 @@
       ]
     },
     {
+      "Route": "img/Quiz.0cbo16hakr.png",
+      "AssetFile": "img/Quiz.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42373"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 14:11:49 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0cbo16hakr"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0="
+        },
+        {
+          "Name": "label",
+          "Value": "img/Quiz.png"
+        }
+      ]
+    },
+    {
+      "Route": "img/Quiz.png",
+      "AssetFile": "img/Quiz.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42373"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 14:11:49 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0="
+        }
+      ]
+    },
+    {
       "Route": "img/apple-touch-icon.k5niu5bqjf.png",
       "AssetFile": "img/apple-touch-icon.png",
       "Selectors": [],
@@ -327,6 +409,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE="
+        }
+      ]
+    },
+    {
+      "Route": "img/brain.png",
+      "AssetFile": "img/brain.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 14:13:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg="
+        }
+      ]
+    },
+    {
+      "Route": "img/brain.wzni4mrxyu.png",
+      "AssetFile": "img/brain.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 14:13:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wzni4mrxyu"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg="
+        },
+        {
+          "Name": "label",
+          "Value": "img/brain.png"
         }
       ]
     },

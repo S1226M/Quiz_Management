@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j49FNoVUyMqqON2M1WxQkOfjrr8fsHIYqOE4F9iJ6L8=",
+  "Hash": "mCzreaIrn1/8jcZolR8a/f52LonEE8It3eJC+bPM69k=",
   "Source": "QuizeManagement",
   "BasePath": "_content/QuizeManagement",
   "Mode": "Default",
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\apple-touch-icon.png"
+    },
+    {
+      "Identity": "D:\\Quiz_Management\\wwwroot\\img\\brain.png",
+      "SourceId": "QuizeManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Quiz_Management\\wwwroot\\",
+      "BasePath": "_content/QuizeManagement",
+      "RelativePath": "img/brain#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wzni4mrxyu",
+      "Integrity": "BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\brain.png"
     },
     {
       "Identity": "D:\\Quiz_Management\\wwwroot\\img\\card.jpg",
@@ -498,6 +519,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\profile-img.jpg"
+    },
+    {
+      "Identity": "D:\\Quiz_Management\\wwwroot\\img\\Quiz.png",
+      "SourceId": "QuizeManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Quiz_Management\\wwwroot\\",
+      "BasePath": "_content/QuizeManagement",
+      "RelativePath": "img/Quiz#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0cbo16hakr",
+      "Integrity": "oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Quiz.png"
     },
     {
       "Identity": "D:\\Quiz_Management\\wwwroot\\img\\slides-1.jpg",
@@ -11983,6 +12025,88 @@
       ]
     },
     {
+      "Route": "img/brain.png",
+      "AssetFile": "D:\\Quiz_Management\\wwwroot\\img\\brain.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 14:13:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg="
+        }
+      ]
+    },
+    {
+      "Route": "img/brain.wzni4mrxyu.png",
+      "AssetFile": "D:\\Quiz_Management\\wwwroot\\img\\brain.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 14:13:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wzni4mrxyu"
+        },
+        {
+          "Name": "label",
+          "Value": "img/brain.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCpbMoEydVeYsaR/DGOfqkNz9zxStZmeSYnLr2NQlcg="
+        }
+      ]
+    },
+    {
       "Route": "img/card.8c29zuxlps.jpg",
       "AssetFile": "D:\\Quiz_Management\\wwwroot\\img\\card.jpg",
       "Selectors": [],
@@ -13455,6 +13579,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-f0qBUGgPiAonJTOLfbkRCMRmi8GzzaJjsQHhmv10ggg="
+        }
+      ]
+    },
+    {
+      "Route": "img/Quiz.0cbo16hakr.png",
+      "AssetFile": "D:\\Quiz_Management\\wwwroot\\img\\Quiz.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42373"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 14:11:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0cbo16hakr"
+        },
+        {
+          "Name": "label",
+          "Value": "img/Quiz.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0="
+        }
+      ]
+    },
+    {
+      "Route": "img/Quiz.png",
+      "AssetFile": "D:\\Quiz_Management\\wwwroot\\img\\Quiz.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42373"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 14:11:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oKf2/yBLNluOiE6pvxVOKp7PQyFQD/6kVWixP/SAQp0="
         }
       ]
     },

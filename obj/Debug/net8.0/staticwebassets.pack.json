@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Quiz_Management\\wwwroot\\img\\Quiz.png",
+      "PackagePath": "staticwebassets\\img\\Quiz.png"
+    },
+    {
       "Id": "D:\\Quiz_Management\\wwwroot\\img\\apple-touch-icon.png",
       "PackagePath": "staticwebassets\\img\\apple-touch-icon.png"
+    },
+    {
+      "Id": "D:\\Quiz_Management\\wwwroot\\img\\brain.png",
+      "PackagePath": "staticwebassets\\img\\brain.png"
     },
     {
       "Id": "D:\\Quiz_Management\\wwwroot\\img\\card.jpg",

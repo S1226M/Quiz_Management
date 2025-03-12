@@ -1,6 +1,7 @@
 wwwroot\css\style.css
 wwwroot\favicon.ico
 wwwroot\img\apple-touch-icon.png
+wwwroot\img\brain.png
 wwwroot\img\card.jpg
 wwwroot\img\favicon.png
 wwwroot\img\logo.png
@@ -19,6 +20,7 @@ wwwroot\img\product-3.jpg
 wwwroot\img\product-4.jpg
 wwwroot\img\product-5.jpg
 wwwroot\img\profile-img.jpg
+wwwroot\img\Quiz.png
 wwwroot\img\slides-1.jpg
 wwwroot\img\slides-2.jpg
 wwwroot\img\slides-3.jpg
