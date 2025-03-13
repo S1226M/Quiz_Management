@@ -39,8 +39,7 @@ namespace QuizeManagement.Controllers
         }
         #endregion Register View
 
-
-        #region Register User View----------
+        #region Register User View
         public IActionResult RegisterUser(UserModel model)
         {
             if (ModelState.IsValid)
@@ -61,42 +60,7 @@ namespace QuizeManagement.Controllers
             }
             return View("Register");
         }
-        #endregion Register User View----------
-
-        //#region User Register
-        //public IActionResult Register(UserModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        string connectionString = configuration.GetConnectionString("ConnectionString");
-        //        SqlConnection sqlConnection = new SqlConnection(connectionString);
-        //        sqlConnection.Open();
-        //        SqlCommand command = sqlConnection.CreateCommand();
-        //        command.CommandType = CommandType.StoredProcedure;
-
-        //        if (model.UserID == 0)
-        //        {
-        //            command.CommandText = "PR_MST_User_Insert";
-        //        }
-        //        else
-        //        {
-        //            command.CommandText = "PR_MST_User_Update";
-        //            command.Parameters.Add("@UserID", SqlDbType.Int).Value = model.UserID;
-        //        }
-
-                
-        //        command.Parameters.Add("@UserName", SqlDbType.VarChar).Value = model.UserName;
-        //        command.Parameters.Add("@Email", SqlDbType.VarChar).Value = model.Email;
-        //        command.Parameters.Add("@Password", SqlDbType.VarChar).Value = model.Password;
-        //        command.Parameters.Add("@Mobile", SqlDbType.VarChar).Value = model.Mobile;
-        //        command.ExecuteNonQuery();
-
-        //        return RedirectToAction("DashboardView", "Dashboard");
-        //    }
-        //    return View("Register");
-        //}
-
-        //#endregion User Register
+        #endregion Register User View
 
         #region User Edit
         public IActionResult UserAddEdit(int UserID)
