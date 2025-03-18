@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:controllers\\quizwisequestioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\controllers\\quizwisequestion_questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:controllers\\quizwisequestion_questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\controllers\\quizwisequestion_questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|solutionrelative:controllers\\quizwisequestion_questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F56177A-5FB8-40D3-957D-28277EF88B16}|QuizeManagement.csproj|d:\\quiz_management\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,8 +122,7 @@
               "RelativeToolTip": "Controllers\\QuestionLevelController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T02:28:23.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T02:28:23.388Z"
             },
             {
               "$type": "Document",
@@ -135,18 +134,17 @@
               "RelativeToolTip": "Controllers\\QuizController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAEIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T17:45:18.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T17:45:18.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "QuizWiseQuestion_QuestionController.cs",
               "DocumentMoniker": "D:\\Quiz_Management\\Controllers\\QuizWiseQuestion_QuestionController.cs",
               "RelativeDocumentMoniker": "Controllers\\QuizWiseQuestion_QuestionController.cs",
               "ToolTip": "D:\\Quiz_Management\\Controllers\\QuizWiseQuestion_QuestionController.cs",
               "RelativeToolTip": "Controllers\\QuizWiseQuestion_QuestionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T02:29:43.613Z",
               "EditorCaption": ""
@@ -159,14 +157,14 @@
               "RelativeDocumentMoniker": "Controllers\\QuizWiseQuestionController.cs",
               "ToolTip": "D:\\Quiz_Management\\Controllers\\QuizWiseQuestionController.cs",
               "RelativeToolTip": "Controllers\\QuizWiseQuestionController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwPQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T17:59:25.447Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserProfileController.cs",
               "DocumentMoniker": "D:\\Quiz_Management\\Controllers\\UserProfileController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserProfileController.cs",
@@ -174,12 +172,11 @@
               "RelativeToolTip": "Controllers\\UserProfileController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T02:30:31.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T02:30:31.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\Quiz_Management\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
@@ -187,8 +184,7 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA8wD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T18:33:38.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T18:33:38.428Z"
             },
             {
               "$type": "Document",
@@ -200,8 +196,7 @@
               "RelativeToolTip": "Controllers\\QuestionController.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAuwBUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T17:48:42.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T17:48:42.131Z"
             },
             {
               "$type": "Document",
@@ -213,8 +208,7 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T03:21:18.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T03:21:18.183Z"
             },
             {
               "$type": "Document",
@@ -226,8 +220,7 @@
               "RelativeToolTip": "Models\\UserModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T18:33:55.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T18:33:55.702Z"
             },
             {
               "$type": "Document",
@@ -239,8 +232,7 @@
               "RelativeToolTip": "Models\\QuizWiseQuestionModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T18:21:02.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T18:21:02.325Z"
             },
             {
               "$type": "Document",
@@ -252,8 +244,7 @@
               "RelativeToolTip": "Views\\Users\\Login.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAwDAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T18:40:31.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T18:40:31.965Z"
             },
             {
               "$type": "Document",
@@ -265,8 +256,7 @@
               "RelativeToolTip": "Views\\Quiz\\QuizList.cshtml",
               "ViewState": "AgIAAEMAAAAAAAAAAAAAwFwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T17:46:00.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T17:46:00.466Z"
             },
             {
               "$type": "Document",
@@ -278,8 +268,7 @@
               "RelativeToolTip": "Views\\Quiz\\QuizAddEdit.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T19:06:41.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T19:06:41.198Z"
             },
             {
               "$type": "Document",
@@ -291,8 +280,7 @@
               "RelativeToolTip": "Controllers\\DashboardController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T03:06:45.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T03:06:45.46Z"
             },
             {
               "$type": "Document",
@@ -304,8 +292,7 @@
               "RelativeToolTip": "Views\\Users\\Register.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T18:33:01.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T18:33:01.076Z"
             },
             {
               "$type": "Document",
