@@ -20,7 +20,7 @@
                 <div class="row">
                     @foreach (DataRow row in Model.Rows)
                     {
-                        <!-- Sales Card -->
+                        @* <!-- Sales Card --> *@
                         <div class="col-xxl-4 col-md-4">
                             <div class="card info-card sales-card">
 
@@ -30,28 +30,34 @@
                                         <li class="dropdown-header text-start">
                                             <h6>Filter</h6>
                                         </li>
-
                                         <li><a class="dropdown-item" href="#">Today</a></li>
                                         <li><a class="dropdown-item" href="#">This Month</a></li>
                                         <li><a class="dropdown-item" href="#">This Year</a></li>
                                     </ul>
                                 </div>
 
-                                <div class="card-body">
-                                    <h5 class="card-title">@row["Level"]</h5>
+                                <a asp-controller="Dashboard"
+                                   asp-action="DashboardQuestionByTheirLevel"
+                                   asp-route-ID="@row["ID"]"
+                                   style="text-decoration: none; color: inherit;">
 
-                                    <div class="d-flex align-items-center">
-                                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
-                                        </div>
-                                        <div class="ps-3">
-                                            <h6>@row["CountOFLevel"]</h6>
-                                            <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                                    <div class="card-body" style="cursor:pointer;">
+                                        <h5 class="card-title">@row["Level"]</h5>
+
+                                        <div class="d-flex align-items-center">
+                                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-cart"></i>
+                                            </div>
+                                            <div class="ps-3">
+                                                <h4>@row["CountOFLevel"]</h4><h5> Question</h5>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+
+                                </a>
                             </div>
                         </div>
+
                         <!-- End Sales Card -->   
                     }
                     <!-- Reports -->

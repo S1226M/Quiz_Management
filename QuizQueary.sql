@@ -686,14 +686,51 @@ END
 CREATE OR ALTER PROC PR_MST_Question_SelectByLevel
 AS
 BEGIN
-	Create Table #TempLevel (CountOFLevel int , Level varchar(20))
+	Create Table #TempLevel (CountOFLevel int , Level varchar(20) , ID int)
 	Insert Into #TempLevel
-			SELECT COUNT([MST_Question].[QuestionLevelID]) AS CountOFLevel,[MST_QuestionLevel].[QuestionLevel] AS Level
-			FROM [dbo].[MST_Question] JOIN [dbo].[MST_QuestionLevel] 
-			ON [MST_Question].[QuestionLevelID] = [MST_QuestionLevel].[QuestionLevelID]
-			GROUP BY [MST_QuestionLevel].[QuestionLevel]
-	Select * From #TempLevel
+			SELECT 
+				COUNT([MST_Question].[QuestionLevelID]) AS CountOFLevel,
+				[MST_QuestionLevel].[QuestionLevel] AS Level,
+				[MST_QuestionLevel].[QuestionLevelID] As ID
+			FROM 
+				[dbo].[MST_Question] 
+				JOIN [dbo].[MST_QuestionLevel] 
+					ON [MST_Question].[QuestionLevelID] = [MST_QuestionLevel].[QuestionLevelID]
+			GROUP BY 
+				[MST_QuestionLevel].[QuestionLevel],
+				[MST_QuestionLevel].[QuestionLevelID];
+	
+	Select CountOFLevel, Level, ID From #TempLevel
+	Order By 
+		Case 
+			WHEN Level = 'Eassy' THEN 1
+            WHEN Level = 'Medium' THEN 2
+            WHEN Level = 'Hard' THEN 3
+            ELSE 4
+        END;
+
 	Drop Table #TempLevel
 END
 
 Exec PR_MST_Question_SelectByLevel
+
+-------------------Display the Question of that Level------------------------------
+Create Procedure PR_Display_Question_Of_That_Level
+	@QuestionLevelID int
+As
+Begin
+	SELECT 
+        [dbo].[MST_Question].[QuestionID],
+        [dbo].[MST_Question].[QuestionText],
+        [dbo].[MST_Question].[OptionA],
+        [dbo].[MST_Question].[OptionB],
+        [dbo].[MST_Question].[OptionC],
+        [dbo].[MST_Question].[OptionD],
+        [dbo].[MST_Question].[CorrectOption],
+        [dbo].[MST_Question].[QuestionMarks],
+        [dbo].[MST_QuestionLevel].[QuestionLevel]
+    FROM [dbo].[MST_Question]
+    INNER JOIN [dbo].[MST_QuestionLevel] ON [dbo].[MST_Question].[QuestionLevelID] = [dbo].[MST_QuestionLevel].[QuestionLevelID]
+    WHERE [dbo].[MST_Question].[QuestionLevelID] = @QuestionLevelID
+End
+Exec PR_Display_Question_Of_That_Level 4

@@ -1,0 +1,61 @@
+﻿@model List<QuizeManagement.Models.DashboardModel>
+@using System.Data
+
+<!-- Question List Section -->
+<div class="card">
+    <div class="card-body">
+        <div class="pull-right col-md-3 my-2">
+            <div id="sample_1_filter" class="dataTables_filter">
+                <input type="text" class="form-control input-group-sm input-small input-inline" id="sample_1" placeholder="Search" aria-controls="sample_1">
+            </div>
+        </div>
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="card-title">Question List</h5>
+            <div class="d-flex p-3 justify-content-end">
+                <a class="btn btn-success" id="addQuestionBtn" asp-controller="Question" asp-action="QuestionAddEdit">Add New Question</a>
+            </div>
+        </div>
+        <table id="sample_1" class="table table-striped">
+            <thead>
+                <tr>
+                    @* <th>#</th> *@
+                    <th>Question Text</th>
+                    <th>Option A</th>
+                    <th>Option B</th>
+                    <th>Option C</th>
+                    <th>Option D</th>
+                    <th>Correct Option</th>
+                    <th>Level</th>
+                    <th>Marks</th>
+                    @* <th>UserName</th> *@
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="sample_2">
+                <!-- Dynamic rows will be added here -->
+                @foreach (var row in Model)
+                {
+                    <tr>
+                        @* <td>@row["QuestionID"]</td> *@
+                        <td>@row.QuestionText</td>
+                        <td>@row.OptionA</td>
+                        <td>@row.OptionB</td>
+                        <td>@row.OptionC</td>
+                        <td>@row.OptionD</td>
+                        <td>@row.CorrectOption</td>
+                        <td style="color: @(row.QuestionLevel.ToString() == "Hard" ? "red" :
+                                                    row.QuestionLevel.ToString() == "Medium" ? "orange" :
+                                                    row.QuestionLevel.ToString() == "Eassy" ? "green" : "black")">
+                            @row.QuestionLevel
+                        </td>
+                        <td>@row.QuestionMarks</td>
+                        <td>
+                            <a asp-controller="Question" asp-action="QuestionAddEdit" asp-route-QuestionID="@row["QuestionID"]" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                            <a asp-controller="Question" asp-action="QuestionDelete" asp-route-QuestionID="@row["QuestionID"]" onclick="return confirm('Are you sure you want to delete this user?');" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
