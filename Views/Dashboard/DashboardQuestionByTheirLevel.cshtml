@@ -1,6 +1,6 @@
 ﻿@model List<QuizeManagement.Models.DashboardModel>
 @using System.Data
-
+<main id="main" class="main">
 <!-- Question List Section -->
 <div class="card">
     <div class="card-body">
@@ -27,8 +27,6 @@
                     <th>Correct Option</th>
                     <th>Level</th>
                     <th>Marks</th>
-                    @* <th>UserName</th> *@
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody id="sample_2">
@@ -49,13 +47,23 @@
                             @row.QuestionLevel
                         </td>
                         <td>@row.QuestionMarks</td>
-                        <td>
-                            <a asp-controller="Question" asp-action="QuestionAddEdit" asp-route-QuestionID="@row["QuestionID"]" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                            <a asp-controller="Question" asp-action="QuestionDelete" asp-route-QuestionID="@row["QuestionID"]" onclick="return confirm('Are you sure you want to delete this user?');" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                        </td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
 </div>
+</main>
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#sample_1").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#sample_2 tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

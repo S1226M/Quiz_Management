@@ -6,7 +6,7 @@ using QuizeManagement.Models;
 
 namespace QuizeManagement.Controllers
 {
-    //[CheckAccess]
+    [CheckAccess]
     public class DashboardController : Controller
     {
         public IConfiguration configuration;
@@ -42,20 +42,26 @@ namespace QuizeManagement.Controllers
             SqlDataReader reader = command.ExecuteReader();
             DataTable datatable = new DataTable();
             datatable.Load(reader);
-            DashboardModel model = new DashboardModel();
+
+            List<DashboardModel> modelList = new List<DashboardModel>();
+
             foreach (DataRow row in datatable.Rows)
             {
-                model.ID = Convert.ToInt32(@row["QuestionID"]);
-                model.QuestionText = @row["QuestionText"].ToString();
-                model.OptionA = @row["OptionA"].ToString();
-                model.OptionB = @row["OptionB"].ToString();
-                model.OptionC = @row["OptionC"].ToString();
-                model.OptionD = @row["OptionD"].ToString();
-                model.QuestionLevel = @row["QuestionLevel"].ToString();
-                model.QuestionMarks = Convert.ToInt32(@row["QuestionMarks"]);
-                model.CorrectOption = @row["CorrectOption"].ToString();
+                DashboardModel model = new DashboardModel
+                {
+                    ID = Convert.ToInt32(row["QuestionID"]),
+                    QuestionText = row["QuestionText"].ToString(),
+                    OptionA = row["OptionA"].ToString(),
+                    OptionB = row["OptionB"].ToString(),
+                    OptionC = row["OptionC"].ToString(),
+                    OptionD = row["OptionD"].ToString(),
+                    QuestionLevel = row["QuestionLevel"].ToString(),
+                    QuestionMarks = Convert.ToInt32(row["QuestionMarks"]),
+                    CorrectOption = row["CorrectOption"].ToString()
+                };
+                modelList.Add(model);
             }
-            return View(model);
+            return View(modelList);
         }
     }
 }
