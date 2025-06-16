@@ -58,8 +58,7 @@
               "RelativeToolTip": "Controllers\\QuizController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T16:18:55.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T16:18:55.894Z"
             },
             {
               "$type": "Document",
@@ -69,7 +68,7 @@
               "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
               "ToolTip": "D:\\Quiz_Management\\Controllers\\DashboardController.cs",
               "RelativeToolTip": "Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T15:26:51.173Z",
               "EditorCaption": ""
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Models\\DashboardModel.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAA0wBEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T16:12:51.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T16:12:51.328Z"
             },
             {
               "$type": "Document",
@@ -109,8 +107,7 @@
               "RelativeToolTip": "Views\\Dashboard\\DashboardQuestionByTheirLevel.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAArwEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T16:09:12.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T16:09:12.532Z"
             },
             {
               "$type": "Document",
@@ -122,8 +119,7 @@
               "RelativeToolTip": "Views\\Question\\QuestionList.cshtml",
               "ViewState": "AgIAACoAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T16:11:13.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T16:11:13.685Z"
             },
             {
               "$type": "Document",
